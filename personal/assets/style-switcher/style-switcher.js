@@ -1,7 +1,7 @@
 $(function(){
 	
-	$('head').append('<link rel="stylesheet" href="assets/style-switcher/style-switcher.css" type="text/css" />');	
-	$('head').append('<script src="assets/style-switcher/jquery.cookie.js"></script>');	
+	$('head').append('<link rel="stylesheet" href="./personal/assets/style-switcher/style-switcher.css" type="text/css" />');	
+	$('head').append('<script src="./personal/assets/style-switcher/jquery.cookie.js"></script>');	
 		
 	//Style container
 	var switcher = $('<div class="switcher"><span class="switch"><i class="fa fa-gear"></i></span> <h4>Style Switcher</h4> <hr> <p>Color Styles</p><div class="s-color"> <a href="#" class="active" data-code="default"> <label class="default"></label> </a> <a href="#" data-code="light-blue"> <label class="light-blue"></label> </a> <a href="#" data-code="teal"> <label class="teal"></label> </a> <a href="#" data-code="light-pink"> <label class="light-pink"></label> </a> <a href="#" data-code="yellow"> <label class="yellow"></label> </a> <a href="#" data-code="purple"> <label class="purple"></label> </a></div> <div class="s-header"> <p>Header Styles</p><a href="index.html">Default</a><a href="index2.html">Option 2</a><a href="index3.html">Option 3</a><a class="dark" href="index4.html">Option 4</a></div></div>');
@@ -53,7 +53,7 @@ $(function(){
 		$('.s-color a').removeClass('active');
 		$(this).addClass('active');
 		var color_code = $(this).attr('data-code');
-		$('link[id="color-scheme"]').attr('href', 'assets/css/color-scheme/'+color_code+'.css');
+		$('link[id="color-scheme"]').attr('href', './personal/assets/css/color-scheme/'+color_code+'.css');
 		$.cookie('braveColor', color_code);
 	});
 	
