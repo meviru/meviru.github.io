@@ -1,13 +1,11 @@
-(function () {
+$(document).ready(function () {
     let root = document.documentElement;
     let header = document.querySelector(".site-header");
     let headerHeight = document.querySelector(".site-header").clientHeight;
     let navToggle = document.querySelector(".nav-toggle");
     let nav = document.querySelector(".navigation");
-    
-    document.addEventListener("DOMContentLoaded", e => {
-        root.style.setProperty('--header-height', headerHeight + "px");
-    });
+
+    root.style.setProperty('--header-height', headerHeight + "px");
 
     var svgs = document.querySelectorAll(".feature-item__icon svg");
     new Waypoint({
@@ -22,14 +20,15 @@
 
     var videoItem = document.querySelector(".video-wrapper video");
     videoItem.playsInline = true;
-    videoItem.autoPlay = true;
+    videoItem.autoplay = true;
+    videoItem.muted = false;
     videoItem.play();
 
     navToggle.addEventListener("click", e => {
         navToggle.classList.toggle('active');
-        nav.classList.toggle('navigation__active');
+        $(nav).slideToggle(300);
     });
 
     new WOW().init();
 
-})();
+});
