@@ -2,7 +2,9 @@
     let root = document.documentElement;
     let header = document.querySelector(".site-header");
     let headerHeight = document.querySelector(".site-header").clientHeight;
-
+    let navToggle = document.querySelector(".nav-toggle");
+    let nav = document.querySelector(".navigation");
+    
     document.addEventListener("DOMContentLoaded", e => {
         root.style.setProperty('--header-height', headerHeight + "px");
     });
@@ -19,7 +21,14 @@
     })
 
     var videoItem = document.querySelector(".video-wrapper video");
+    videoItem.playsInline = true;
+    videoItem.autoPlay = true;
     videoItem.play();
+
+    navToggle.addEventListener("click", e => {
+        navToggle.classList.toggle('active');
+        nav.classList.toggle('navigation__active');
+    });
 
     new WOW().init();
 
