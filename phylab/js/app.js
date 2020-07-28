@@ -29,6 +29,31 @@ $(document).ready(function () {
         $(nav).slideToggle(300);
     });
 
+    $("a[href^='#']").click(function () {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top - 60
+            }, 600);
+        }
+    });
+
+    var offset = 300,
+        offsetOpacity = 1200,
+        $backtoTop = $('.cd-top');
+
+    $(window).scroll(function () {
+        ($(this).scrollTop() > offset) ? $backtoTop.addClass('cd-is-visible') : $backtoTop.removeClass('cd-is-visible cd-fade-out');
+    });
+
+    $backtoTop.click(function (e) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, 600);
+    })
+
     new WOW().init();
 
 });

@@ -20,10 +20,6 @@ a {
   text-decoration: none;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   color: #262626;
   overflow-x: hidden;
@@ -474,7 +470,8 @@ svg.active .svg-elem-5 {
   background-color: #2ed5ff;
 }
 
-.target-user-section .target-item__inner:hover .target-item__desc {
+.target-user-section .target-item__inner:hover .target-item__desc,
+.target-user-section .target-item__inner:hover .target-item__title {
   color: #ffffff;
 }
 
@@ -642,6 +639,50 @@ svg.active .svg-elem-5 {
 
 .copyright a:hover {
   text-decoration: underline;
+}
+
+.cd-top {
+  position: fixed;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  bottom: -50px;
+  right: -50px;
+  color: #ffffff;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  background: #2ed5ff;
+  border: 1px solid transparent;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.cd-top:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 0;
+  right: 0;
+  top: 42%;
+  margin: auto;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  border-left: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+.cd-top.cd-is-visible {
+  bottom: 50px;
+  right: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .cd-top.cd-is-visible {
+    bottom: 20px;
+    right: 20px;
+  }
 }
 
 @-webkit-keyframes fadeInUp {
