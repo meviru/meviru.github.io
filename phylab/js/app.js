@@ -8,7 +8,7 @@
     });
 
     var svgs = document.querySelectorAll(".feature-item__icon svg");
-    var svgwaypoint = new Waypoint({
+    new Waypoint({
         element: document.getElementById('feature-section'),
         handler: function () {
             svgs.forEach(el => {
@@ -17,15 +17,6 @@
         },
         offset: '40%'
     })
-
-
-    // var svgwaypoint = new Waypoint({
-    //     element: document.getElementById('inner-item-left'),
-    //     handler: function () {
-    //         this.element.classList.add('slide-in');
-    //     },
-    //     offset: '75%'
-    // })
 
     new WOW().init();
 
