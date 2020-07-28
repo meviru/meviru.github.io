@@ -18,6 +18,9 @@
         offset: '40%'
     })
 
+    var videoItem = document.querySelector(".video-wrapper video");
+    videoItem.play();
+
     new WOW().init();
 
 })();
