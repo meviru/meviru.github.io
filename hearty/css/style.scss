@@ -1405,18 +1405,21 @@ select {
   left: 0;
   right: 0;
   z-index: 999;
-  padding: 25px 0;
+  padding: 25px;
   background-color: transparent;
   transition: 0.35s cubic-bezier(0.075, 0.82, 0.165, 1) padding;
   .row {
     justify-content: space-between;
   }
   .logo {
+    position: relative;
+    z-index: 3;
     > a {
       color: $white;
       font-size: 25px;
       font-weight: 500;
       @include flex-center();
+      transition: 0.2s ease;
       img {
         max-width: 40px;
         margin-right: 8px;
@@ -1425,7 +1428,12 @@ select {
   }
 }
 
+.nav-toggle {
+  display: none;
+}
+
 .site-nav {
+  display: block;
   ul {
     @include flex-align-center();
     > li {
@@ -1436,13 +1444,14 @@ select {
       > a {
         color: $white;
         display: block;
+        transition: 0.2s ease;
       }
     }
   }
 }
 
 .site-header--fixed {
-  padding: 15px 0;
+  padding: 15px 25px;
   background-color: $white;
   box-shadow: 0 0 5px -4px rgba($black, 0.8);
   animation: bringIn 0.7s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
@@ -1456,6 +1465,9 @@ select {
       > li {
         > a {
           color: $text-color;
+          &:hover {
+            color: $primary;
+          }
           &.action {
             color: $white;
           }
@@ -1531,7 +1543,11 @@ select {
   text-align: center;
   &__h2 {
     font-size: 30px;
-    margin-bottom: 15px;
+    line-height: 32px;
+  }
+  &__p {
+    opacity: 0.8;
+    margin: 5px 0 15px;
   }
 }
 
@@ -1589,6 +1605,9 @@ select {
   }
   &__wrap {
     margin-top: 80px;
+    .row {
+      justify-content: center;
+    }
   }
   .c-user-item {
     display: block;
@@ -1596,7 +1615,7 @@ select {
     overflow: hidden;
     position: relative;
     border-radius: 5px;
-    margin: 0 auto 30px 0;
+    margin: 0 auto 30px auto;
     &:hover {
       img {
         transform: scale(1.12);
@@ -1632,7 +1651,7 @@ select {
     max-width: 1180px;
   }
   &__wrap {
-    margin-top: 65px;
+    margin-top: 50px;
     .owl-carousel {
       .owl-stage-outer {
         padding: 15px 0;
@@ -1736,7 +1755,7 @@ select {
 
 .c-contact-form {
   width: 100%;
-  margin: 0 auto;
+  margin: 80px auto 0;
   max-width: 420px;
   .form-group {
     position: relative;
@@ -1810,6 +1829,51 @@ select {
   }
 }
 
+.cd-top {
+  position: fixed;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  bottom: -50px;
+  right: -50px;
+  color: $white;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  background: $text-color;
+  border: 1px solid transparent;
+  transition: all 0.5s ease;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 0;
+    right: 0;
+    top: 42%;
+    margin: auto;
+    transform: rotate(135deg);
+    border-left: 2px solid $white;
+    border-bottom: 2px solid $white;
+  }
+  @media screen and (max-width: 767px) {
+    width: 40px;
+    height: 40px;
+    &:before {
+      width: 10px;
+      height: 10px;
+    }
+  }
+  &.cd-is-visible {
+    bottom: 50px;
+    right: 50px;
+    @media screen and (max-width: 767px) {
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+}
+
 .site-footer {
   padding: 25px;
   text-align: center;
@@ -1845,6 +1909,269 @@ select {
     color: $white;
     &:hover {
       text-decoration: underline;
+    }
+  }
+}
+
+/*-----------------------------
+  RESPONSIVE
+-----------------------------*/
+@media screen and (max-width: 1024px) {
+  .site-header {
+    padding: 25px 15px;
+  }
+  .site-header--fixed {
+    padding: 15px;
+  }
+  .site-nav {
+    ul {
+      > li {
+        margin-left: 30px;
+        > a {
+          &.action {
+            min-width: 110px;
+          }
+        }
+      }
+    }
+  }
+  .c-feature {
+    padding: 0;
+    &__h3 {
+      font-size: 18px;
+    }
+  }
+  .c-testimonial {
+    .c-testi-item {
+      padding: 20px 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .c-testimonial {
+    .container {
+      padding: 0;
+    }
+  }
+  .c-hero {
+    min-height: 500px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .site-header {
+    padding: 15px;
+  }
+  .nav-toggle {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 20px;
+    width: 24px;
+    height: 22px;
+    z-index: 3;
+    color: pointer;
+    transform: translateY(-50%);
+    span {
+      position: relative;
+      width: 100%;
+      height: 2px;
+      display: block;
+      margin-top: 10px;
+      background-color: $white;
+      &:before,
+      &:after {
+        position: absolute;
+        content: "";
+        height: 2px;
+        top: 8px;
+        left: 0;
+        right: 0;
+        background-color: $white;
+      }
+      &:after {
+        top: -8px;
+      }
+    }
+    &.active {
+      span {
+        background-color: transparent;
+        &:before,
+        &:after {
+          top: 0;
+          left: 0;
+          transform: rotate(-45deg);
+          transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
+        }
+        &:before {
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+  .site-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 80px 0 20px 0;
+    background-color: $white;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+    box-shadow: 0 0 5px -4px rgba($black, 0.5);
+    > ul {
+      opacity: 0;
+      flex-direction: column;
+      align-items: stretch;
+      > li {
+        padding: 0 20px;
+        margin: 0 0 20px 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        > a {
+          margin: 0;
+          color: $text-color;
+          display: inline-block;
+          &.action {
+            color: $white;
+          }
+        }
+      }
+    }
+    &.site-nav--active {
+      transform: translateY(0);
+      > ul {
+        transition: opacity 0.5s ease;
+        transition-delay: 0.3s;
+        opacity: 1;
+      }
+    }
+  }
+  .site-header--fixed {
+    padding: 10px 15px;
+    .nav-toggle {
+      span {
+        background-color: $text-color;
+        &:before,
+        &:after {
+          background-color: $text-color;
+        }
+      }
+      &.active {
+        span {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .site-header--nav-active {
+    .logo {
+      > a {
+        color: $text-color;
+      }
+    }
+    .nav-toggle {
+      span {
+        background-color: $text-color;
+        &:before,
+        &:after {
+          background-color: $text-color;
+        }
+      }
+      &.active {
+        span {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .c-hero {
+    &__shape {
+      svg {
+        height: 86px;
+        width: 155%;
+      }
+    }
+  }
+  .c-hero-content {
+    padding: 0 15px;
+    &__h1 {
+      font-size: 30px;
+      line-height: 30px;
+      margin-bottom: 5px;
+    }
+    &__p {
+      font-size: 16px;
+    }
+  }
+
+  .c-features {
+    padding: 50px 0 20px 0;
+    &__wrap {
+      margin-top: 35px;
+    }
+  }
+  .c-feature {
+    margin-bottom: 25px;
+  }
+  .c-users {
+    padding: 50px 0 20px 0;
+    &__wrap {
+      margin-top: 50px;
+    }
+  }
+
+  .c-testimonial {
+    padding: 50px 0;
+    &__wrap {
+      margin-top: 20px;
+      .owl-carousel {
+        .owl-dots {
+          margin-top: 10px;
+        }
+        .owl-item {
+          &.active {
+            &.center {
+              .c-testi-item {
+                transform: none;
+                &__inner {
+                  padding: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .c-testi-item {
+      padding: 20px;
+    }
+  }
+
+  .c-register {
+    padding: 50px 0;
+    .c-contact-form {
+      margin: 40px auto 0;
+    }
+  }
+
+  .site-footer {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .c-users {
+    &__wrap {
+      .col-sm-4 {
+        width: 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
     }
   }
 }
