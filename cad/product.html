@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="main" id="main">
+        <header class="header">
+            <div class="row">
+                <div class="header__left">
+                    <div class="header-search">
+                        <form action="javascript:void()">
+                            <input class="header-search__control" placeholder="Search" type="text" name="search">
+                            <button class="header-search__action" type="submit">
+                                <i data-feather="search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="header__right">
+                    <div class="header-noti">
+                        <div class="header-noti__inner">
+                            <i class="header-noti__icon" data-feather="bell"></i>
+                            <span class="header-noti__count">10</span>
+                        </div>
+                    </div>
+                    <div class="header-user">
+                        <div class="header-user__inner">
+                            <span class="header-user__icon">
+                                <img src="https://i.pravatar.cc/400?img=12">
+                            </span>
+                            <span class="header-user__name">John Doe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <aside class="sidebar">
+            <div class="logo">
+                <a href="index.html"><i data-feather="framer"></i> Logo</a>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="parent">
+                    <a href="javascript:void(0)">
+                        <i data-feather="home"></i>
+                        Machine Name
+                    </a>
+                    <ul class="submenu">
+                        <li class="parent">
+                            <a href="javascript:void(0)">
+                                Submenu 1
+                            </a>
+                            <ul class="submenu">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        Submenu 1
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                Submenu 2
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="parent">
+                    <a href="javascript:void(0)">
+                        <i data-feather="command"></i>
+                        Accessories
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="javascript:void(0)">
+                                Submenu 1
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                Submenu 2
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <i data-feather="book-open"></i>
+                        Documentation
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-option">
+                <ul class="sidebar-menu">
+                    <li>
+                        <a href="javascript:void()">
+                            <i data-feather="settings"></i>
+                            Setting
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void()">
+                            <i data-feather="shield"></i>
+                            Privacy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void()">
+                            <i data-feather="help-circle"></i>
+                            Help
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <section class="main-wrapper">
+            <div class="products-list">
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="index.html" class="product-item">
+                            <img src="images/product3.png">
+                            <span>Machine Part</span>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="index.html" class="product-item">
+                            <img src="images/product4.png">
+                            <span>Accessories</span>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="index.html" class="product-item">
+                            <img src="images/product5.png">
+                            <span>Control Lever</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.rwdImageMaps.min.js"></script>
+    <script src="js/feather.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
