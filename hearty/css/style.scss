@@ -1376,9 +1376,10 @@ select {
   display: inline-block;
   vertical-align: middle;
   border: 1px solid transparent;
-  background-color: $primary;
-  transition: 0.2s ease;
+  transition: 0.2s ease all;
   box-shadow: 0 0 5px -4px rgba($black, 0.8);
+  background: linear-gradient(40deg, $primary 10%, #f15fcc 56%);
+  background-size: 200% auto;
   &:before,
   &:after {
     content: none;
@@ -1386,15 +1387,19 @@ select {
   }
   &:hover {
     color: $white;
-    background-color: darken($primary, 5%);
+    transition: 0.2s ease all;
+    background: linear-gradient(40deg, #ff5acd 0%, $primary 100%);
+    background-position: right center;
   }
   &.action-outline {
     color: $primary;
     border: 1px solid $primary;
-    background-color: transparent;
+    background: transparent;
     &:hover {
       color: $white;
-      background-color: $primary;
+      border-color: transparent;
+      background: linear-gradient(40deg, #ff5acd 0%, $primary 100%);
+      background-position: right center;
     }
   }
 }
@@ -1483,7 +1488,7 @@ select {
   min-height: 800px;
   z-index: 9;
   text-align: center;
-  background: url("../images/pexels-andrea-piacquadio-842546.jpg") no-repeat
+  background: url("../images/pexels-andrea-piacquadio-3777017.jpg") no-repeat
     center/cover;
   &:after {
     position: absolute;
@@ -1493,8 +1498,8 @@ select {
     right: 0;
     bottom: 0;
     z-index: -1;
-    opacity: 0.2;
-    background-image: linear-gradient(62deg, $primary 0%, #ff6a88 100%);
+    opacity: 0.4;
+    background-image: linear-gradient(62deg, $primary 20%, #ff6a88 100%);
   }
   &__shape {
     position: absolute;
@@ -1534,7 +1539,7 @@ select {
     border-color: $white;
     &:hover {
       color: $primary;
-      background-color: $white;
+      background: $white;
     }
   }
 }
@@ -1738,7 +1743,7 @@ select {
   z-index: 9;
   color: $white;
   padding: 100px 0 80px 0;
-  background: url("../images/pexels-andrea-piacquadio-842546.jpg") no-repeat
+  background: url("../images/pexels-filipe-leme-2273343.jpg") no-repeat
     center/cover;
   background-attachment: fixed;
   &:before {
