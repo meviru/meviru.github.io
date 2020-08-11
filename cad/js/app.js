@@ -14,7 +14,7 @@ $(document).ready(function () {
         "--cart-cta-height": fastCheckoutBtn + "px"
     });
 
-    $("#openProductDetail").click(function () {
+    $("#openProductDetail, .openProductDetail").click(function () {
         $(".product-detail-sidebar").addClass("active");
     });
 

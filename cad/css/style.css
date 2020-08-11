@@ -902,6 +902,18 @@ select {
   min-height: 70px;
 }
 
+.form-wrap input[type="file"] {
+  width: 100%;
+  border: none;
+  font-size: 15px;
+  padding: 8px;
+  font-weight: 500;
+  padding-right: 15px;
+  border-radius: 6px;
+  color: #353c42;
+  background-color: #f1f4f9;
+}
+
 .admin-body .sidebar {
   background-color: #1e252f;
 }
