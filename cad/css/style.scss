@@ -8,6 +8,7 @@ $btn-color: $primary;
 $text-color: #353c42;
 $icon-color: #7edce4;
 $text-color-grey: #6a6f83;
+$admin-primary: #3171ff;
 
 @mixin flex-center {
   display: flex;
@@ -281,6 +282,11 @@ select {
           border-right: 2px solid rgba($white, 0.9);
           border-bottom: 2px solid rgba($white, 0.9);
         }
+        &.admin {
+          .submenu {
+            display: block;
+          }
+        }
       }
       .submenu {
         display: none;
@@ -297,6 +303,9 @@ select {
             font-size: 15px;
           }
           &.active {
+            > a {
+              background-color: rgba($black, 0.5);
+            }
             &.parent {
               &:after {
                 top: 14px;
@@ -703,6 +712,125 @@ select {
           }
         }
       }
+    }
+  }
+}
+
+.main-admin-wrap {
+  padding-top: 110px;
+  padding-left: 40px;
+}
+
+.form-wrap {
+  width: 100%;
+  padding: 20px;
+  max-width: 560px;
+  border-radius: 5px;
+  background-color: $white;
+  box-shadow: 0 0 5px -3px rgba($black, 0.6);
+
+  .form-title {
+    margin-bottom: 20px;
+    &__h2 {
+      font-size: 22px;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+    > label {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+  }
+
+  .form-control {
+    width: 100%;
+    border: none;
+    height: 40px;
+    font-size: 15px;
+    padding: 0 15px;
+    font-weight: 500;
+    padding-right: 15px;
+    border-radius: 6px;
+    color: $text-color;
+    background-color: $grey;
+  }
+
+  textarea {
+    &.form-control {
+      resize: none;
+      padding: 10px;
+      min-height: 70px;
+    }
+  }
+}
+
+.admin-body {
+  .sidebar {
+    background-color: $black;
+    .logo > a {
+      color: $white;
+      svg {
+        stroke: $admin-primary;
+      }
+    }
+    .sidebar-option {
+      border-top-color: rgba($white, 0.1);
+    }
+    .sidebar-menu {
+      li {
+        margin-bottom: 15px;
+        a {
+          color: $white;
+          [class^="feather"] {
+            stroke: $admin-primary;
+          }
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .submenu {
+          > li {
+            &.active {
+              > a {
+                color: $white;
+                background-color: rgba($admin-primary, 0.4);
+              }
+            }
+          }
+        }
+      }
+      > li {
+        &:hover {
+          a {
+            background-color: rgba($admin-primary, 0.2);
+          }
+        }
+        &.active {
+          &.parent {
+            &:after {
+              border-right-color: $admin-primary;
+              border-bottom-color: $admin-primary;
+            }
+          }
+          > a {
+            color: $white;
+            background-color: rgba($admin-primary, 0.4);
+          }
+        }
+      }
+    }
+  }
+  .header-noti__count {
+    background-color: $admin-primary;
+  }
+  .action {
+    background-color: $admin-primary;
+    &:hover {
+      background-color: darken($admin-primary, 5%);
     }
   }
 }

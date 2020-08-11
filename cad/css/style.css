@@ -336,6 +336,10 @@ select {
   border-bottom: 2px solid rgba(255, 255, 255, 0.9);
 }
 
+.sidebar .sidebar-menu li.parent.admin .submenu {
+  display: block;
+}
+
 .sidebar .sidebar-menu li .submenu {
   display: none;
   padding: 10px;
@@ -352,6 +356,10 @@ select {
 
 .sidebar .sidebar-menu li .submenu > li a {
   font-size: 15px;
+}
+
+.sidebar .sidebar-menu li .submenu > li.active > a {
+  background-color: rgba(30, 37, 47, 0.5);
 }
 
 .sidebar .sidebar-menu li .submenu > li.active.parent:after {
@@ -839,6 +847,122 @@ select {
   .cart-sidebar .cart-content__table td .action-xs svg {
     display: block;
   }
+}
+
+.main-admin-wrap {
+  padding-top: 110px;
+  padding-left: 40px;
+}
+
+.form-wrap {
+  width: 100%;
+  padding: 20px;
+  max-width: 560px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 5px -3px rgba(30, 37, 47, 0.6);
+          box-shadow: 0 0 5px -3px rgba(30, 37, 47, 0.6);
+}
+
+.form-wrap .form-title {
+  margin-bottom: 20px;
+}
+
+.form-wrap .form-title__h2 {
+  font-size: 22px;
+}
+
+.form-wrap .form-group {
+  margin-bottom: 20px;
+}
+
+.form-wrap .form-group > label {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-wrap .form-control {
+  width: 100%;
+  border: none;
+  height: 40px;
+  font-size: 15px;
+  padding: 0 15px;
+  font-weight: 500;
+  padding-right: 15px;
+  border-radius: 6px;
+  color: #353c42;
+  background-color: #f1f4f9;
+}
+
+.form-wrap textarea.form-control {
+  resize: none;
+  padding: 10px;
+  min-height: 70px;
+}
+
+.admin-body .sidebar {
+  background-color: #1e252f;
+}
+
+.admin-body .sidebar .logo > a {
+  color: #ffffff;
+}
+
+.admin-body .sidebar .logo > a svg {
+  stroke: #3171ff;
+}
+
+.admin-body .sidebar .sidebar-option {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.admin-body .sidebar .sidebar-menu li {
+  margin-bottom: 15px;
+}
+
+.admin-body .sidebar .sidebar-menu li a {
+  color: #ffffff;
+}
+
+.admin-body .sidebar .sidebar-menu li a [class^="feather"] {
+  stroke: #3171ff;
+}
+
+.admin-body .sidebar .sidebar-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.admin-body .sidebar .sidebar-menu li .submenu > li.active > a {
+  color: #ffffff;
+  background-color: rgba(49, 113, 255, 0.4);
+}
+
+.admin-body .sidebar .sidebar-menu > li:hover a {
+  background-color: rgba(49, 113, 255, 0.2);
+}
+
+.admin-body .sidebar .sidebar-menu > li.active.parent:after {
+  border-right-color: #3171ff;
+  border-bottom-color: #3171ff;
+}
+
+.admin-body .sidebar .sidebar-menu > li.active > a {
+  color: #ffffff;
+  background-color: rgba(49, 113, 255, 0.4);
+}
+
+.admin-body .header-noti__count {
+  background-color: #3171ff;
+}
+
+.admin-body .action {
+  background-color: #3171ff;
+}
+
+.admin-body .action:hover {
+  background-color: #185fff;
 }
 
 @media screen and (max-width: 1480px) {
