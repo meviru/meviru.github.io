@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterPlan</title>
+    <link rel="stylesheet" href="css/spectre.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__top">
+            <div class="container">
+                <div class="cols">
+                    <div class="site-header--nav d-flex">
+                        <div class="site-header__currency">
+                            <div class="dropdown">
+                                <a href="javascript:void(0)" class="btn btn-primary text-light dropdown-toggle" tabindex="0">USD</a>
+                                <ul class="menu">
+                                    <li>
+                                        <a href="javascript:void(0)">GBP</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">CAD</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="site-header__account">
+                            <a href="javascript:void(0)" class="btn text-light btn-primary">My Account</a>
+                        </div>
+                    </div>
+                    <div class="site-header--option d-flex">
+                        <a href="javascript:void(0)"
+                            class="p-relative d-inline-block site-header--option__icon site-header--option__icon-msg">
+                            <img class="img-responsive" src="images/mail-line.png">
+                            <span class="count p-absolute text-light d-flex s-circle">10</span>
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="p-relative d-inline-block site-header--option__icon site-header--option__icon-cart">
+                            <img class="img-responsive" src="images/shopping-cart-line.png">
+                            <span class="count p-absolute text-light d-flex s-circle">10</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-header__bottom">
+            <div class="container">
+                <div class="cols col-gapless">
+                    <div class="logo">
+                        <a href="javascript:void(0)" class="text-light">
+                            <img src="images/logo.png" alt="MasterPlan" class="img-responsive">
+                        </a>
+                    </div>
+                    <div class="site-header__bottom-right d-flex">
+                        <div class="site-user-info">
+                            <div class="dropdown site-user-info__name">
+                                <a href="javascript:void(0)" class="text-light d-flex dropdown-toggle" tabindex="0">
+                                    <div class="site-user-info__icon s-circle mx-2">
+                                        <img src="images/user-3-line.png" class="img-responsive s-circle">
+                                    </div>
+                                    <span>Username</span>
+                                </a>
+                                <ul class="menu">
+                                    <li>
+                                        <a href="javascript:void(0)">Messages</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">Account</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="site-notification">
+                            <div class="dropdown dropdown-right">
+                                <a href="javascript:void(0)" class="p-relative text-light d-flex dropdown-toggle" tabindex="0">
+                                    <img src="images/notification-3-line.png">
+                                    <span class="p-absolute count s-circle d-flex">10</span>
+                                </a>
+                                <ul class="menu">
+                                    <li>
+                                        <a href="javascript:void(0)" class="d-flex p-relative noti-item">
+                                            <div class="noti-item__img s-circle d-flex">
+                                                <img class="img-responsive" src="images/user-3-line.png">
+                                            </div>
+                                            <div class="noti-item__desc">
+                                                <div class="noti-item__title">James liked your post: "Pure css
+                                                    notification
+                                                    box"
+                                                </div>
+                                                <div class="noti-item__date">11/7 - 2:30 pm</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="d-flex p-relative noti-item">
+                                            <div class="noti-item__img s-circle d-flex">
+                                                <img class="img-responsive" src="images/user-3-line.png">
+                                            </div>
+                                            <div class="noti-item__desc">
+                                                <div class="noti-item__title">James liked your post: "Pure css
+                                                    notification
+                                                    box"
+                                                </div>
+                                                <div class="noti-item__date">11/7 - 2:30 pm</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="d-flex p-relative noti-item">
+                                            <div class="noti-item__img s-circle d-flex">
+                                                <img class="img-responsive" src="images/user-3-line.png">
+                                            </div>
+                                            <div class="noti-item__desc">
+                                                <div class="noti-item__title">James liked your post: "Pure css
+                                                    notification
+                                                    box"
+                                                </div>
+                                                <div class="noti-item__date">11/7 - 2:30 pm</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="page-wrapper" id="page-wrapper">
+        <section class="category-listing">
+            <div class="container">
+                <div class="cols">
+                    <div class="column col-3 col-xl-4 col-md-12">
+                        <div class="sidebar">
+                            <div class="sidebar-block no-padding">
+                                <div class="sidebar-block__head">Category</div>
+                                <ul class="sidebar-categories">
+                                    <li>
+                                        <div class="sidebar-categories__item parent">
+                                            <i class="sidebar-categories__icon"></i>
+                                            <input type="checkbox" checked class="sidebar-categories__checkbox">
+                                            <a href="javascript:void(0)" class="cat-name">
+                                                <span class="cat-name__icon s-circle">
+                                                    <img class="img-responsive" src="images/car-fill.png">
+                                                </span>
+                                                <strong class="mx-2">CARS</strong>
+                                            </a>
+                                            <div class="sub-cat">
+                                                <a href="javascript:void(0)" class="cat-name">
+                                                    <span class="cat-name__icon s-circle">
+                                                        <img class="img-responsive" src="images/car-fill.png">
+                                                    </span>
+                                                    <strong class="mx-2">Renault</strong>
+                                                </a>
+                                                <div class="sidebar-categories__item parent">
+                                                    <i class="sidebar-categories__icon"></i>
+                                                    <input type="checkbox" checked class="sidebar-categories__checkbox">
+                                                    <a href="javascript:void(0)" class="cat-name">
+                                                        <span class="cat-name__icon s-circle">
+                                                            <img class="img-responsive" src="images/car-fill.png">
+                                                        </span>
+                                                        <strong class="mx-2">Citroen</strong>
+                                                    </a>
+                                                    <div class="sub-cat">
+                                                        <a href="javascript:void(0)" class="cat-name">
+                                                            <span class="cat-name__icon s-circle">
+                                                                <img class="img-responsive" src="images/car-fill.png">
+                                                            </span>
+                                                            <strong class="mx-2">Renault</strong>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sidebar-block">
+                                <div class="agent-block d-flex">
+                                    <div class="agent-block__img d-flex s-circle">
+                                        <img class="img-responsive" src="images/user-3-line.png">
+                                    </div>
+                                    <div class="agent-block__desc">
+                                        <h3 class="agent-block__name">Your Agent</h3>
+                                        <p class="agent-block__info">Info - information text</p>
+                                        <p class="agent-block__about">About - joined 2000</p>
+                                        <p class="agent-block__more">More about it</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-block">
+                                <h2 class="sidebar-block__title">Menu</h2>
+                                <ul class="sidebar-block__list">
+                                    <li>
+                                        <a href="javascript:void(0)">Info Text</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">Info Text</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">Info Text</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="sidebar-block">
+                                <h2 class="sidebar-block__title">Cars Type</h2>
+                                <ul class="sidebar-block__list">
+                                    <li>
+                                        <label>Luxury </label>
+                                        <a href="javascript:void(0)">
+                                            2 Doors cars
+                                            <span>(2929)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column col-9 col-xl-8 col-md-12">
+                        <div class="product-list">
+                            <div class="product-filters">
+                                <form action="#">
+                                    <div class="cols">
+                                        <div class="product-filters__searchbox column col-4 col-xl-6 col-sm-12">
+                                            <input type="text" name="searchtext" placeholder="Looking for something?"
+                                                required>
+                                        </div>
+                                        <div class="product-filters__dropdown column col-3 col-xl-6 col-sm-12">
+                                            <select name="listing" required>
+                                                <option value="Listing">Listing</option>
+                                                <option value="Listing">Listing 2</option>
+                                            </select>
+                                        </div>
+                                        <div class="product-filters__sorting column col-3 col-xl-6 col-sm-12 d-flex">
+                                            <label>Sory result by:</label>
+                                            <div class="dropdown dropdown-right">
+                                                <a href="javascript:void(0)" class="text-dark d-flex dropdown-toggle"
+                                                    tabindex="0">Rating</a>
+                                                <ul class="menu">
+                                                    <li>
+                                                        <a href="javascript:void(0)">Rating</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">Price</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)">Type</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="product-filters__action column col-2 col-xl-6 col-sm-12">
+                                            <button type="submit" class="btn btn-primary">Search</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="product-grid">
+                                <div class="cols">
+                                    <div class="column col-4 col-xl-6 col-md-6 col-sm-12">
+                                        <div class="product-item">
+                                            <div class="product-item__img p-relative">
+                                                <img src="images/product-image.jpg" class="img-responsive">
+                                                <span class="product-item__cat p-absolute">Renault</span>
+                                                <span class="product-item__offer p-absolute">Offer: 2d remaining</span>
+                                            </div>
+                                            <div class="product-item__info">
+                                                <a class="product-item__name">Product title goes here with max work
+                                                    allowed</a>
+                                                <div class="product-review">
+                                                    <div class="product-review__rating">
+                                                        <div class="stars">
+                                                            <input type="radio" checked name="star" class="star-1" id="star-1">
+                                                            <label class="star-1" for="star-1">1</label>
+                                                            <input type="radio" checked name="star" class="star-2" id="star-2">
+                                                            <label class="star-2" for="star-2">2</label>
+                                                            <input type="radio" checked name="star" class="star-3" id="star-3">
+                                                            <label class="star-3" for="star-3">3</label>
+                                                            <input type="radio" checked name="star" class="star-4" id="star-4">
+                                                            <label class="star-4" for="star-4">4</label>
+                                                            <input type="radio" checked name="star" class="star-5" id="star-5">
+                                                            <label class="star-5" for="star-5">5</label>
+                                                            <span></span>
+                                                        </div>
+                                                    </div>
+                                                    <span>222 Reviews</span>
+                                                </div>
+                                                <div class="product-item__price d-flex">
+                                                    <span class="old-price">$300.00</span>
+                                                    <span class="new-price">$250.00</span>
+                                                    <span class="euro-price">200 EUR</span>
+                                                </div>
+                                                <div class="product-item__action">
+                                                    <a href="javascript:void(0)" class="btn btn-primary">VIEW MORE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column col-4 col-xl-6 col-md-6 col-sm-12">
+                                        <div class="product-item">
+                                            <div class="product-item__img p-relative">
+                                                <img src="images/product-image.jpg" class="img-responsive">
+                                                <span class="product-item__cat p-absolute">Renault</span>
+                                                <span class="product-item__offer p-absolute">Offer: 2d remaining</span>
+                                            </div>
+                                            <div class="product-item__info">
+                                                <a class="product-item__name">Product title goes here with max work
+                                                    allowed</a>
+                                                <div class="product-review">
+                                                    <div class="product-review__rating">
+                                                        <div class="stars">
+                                                            <input type="radio" name="star" class="star-1" id="star-1">
+                                                            <label class="star-1" for="star-1">1</label>
+                                                            <input type="radio" name="star" class="star-2" id="star-2">
+                                                            <label class="star-2" for="star-2">2</label>
+                                                            <input type="radio" name="star" class="star-3" id="star-3">
+                                                            <label class="star-3" for="star-3">3</label>
+                                                            <input type="radio" name="star" class="star-4" id="star-4">
+                                                            <label class="star-4" for="star-4">4</label>
+                                                            <input type="radio" name="star" class="star-5" id="star-5">
+                                                            <label class="star-5" for="star-5">5</label>
+                                                            <span></span>
+                                                        </div>
+                                                    </div>
+                                                    <span>222 Reviews</span>
+                                                </div>
+                                                <div class="product-item__price d-flex">
+                                                    <span class="old-price">$300.00</span>
+                                                    <span class="euro-price">200 EUR</span>
+                                                </div>
+                                                <div class="product-item__action">
+                                                    <a href="javascript:void(0)" class="btn btn-primary">VIEW MORE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column col-4 col-xl-6 col-md-6 col-sm-12">
+                                        <div class="product-item">
+                                            <div class="product-item__img p-relative">
+                                                <img src="images/product-image.jpg" class="img-responsive">
+                                                <span class="product-item__cat p-absolute">Renault</span>
+                                                <span class="product-item__offer p-absolute">Offer: 2d remaining</span>
+                                            </div>
+                                            <div class="product-item__info">
+                                                <a class="product-item__name">Product title goes here with max work
+                                                    allowed</a>
+                                                <div class="product-review">
+                                                    <div class="product-review__rating">
+                                                        <div class="stars">
+                                                            <input type="radio" name="star" class="star-1" id="star-1">
+                                                            <label class="star-1" for="star-1">1</label>
+                                                            <input type="radio" name="star" class="star-2" id="star-2">
+                                                            <label class="star-2" for="star-2">2</label>
+                                                            <input type="radio" name="star" class="star-3" id="star-3">
+                                                            <label class="star-3" for="star-3">3</label>
+                                                            <input type="radio" name="star" class="star-4" id="star-4">
+                                                            <label class="star-4" for="star-4">4</label>
+                                                            <input type="radio" name="star" class="star-5" id="star-5">
+                                                            <label class="star-5" for="star-5">5</label>
+                                                            <span></span>
+                                                        </div>
+                                                    </div>
+                                                    <span>222 Reviews</span>
+                                                </div>
+                                                <div class="product-item__price d-flex">
+                                                    <span class="old-price">$300.00</span>
+                                                    <span class="euro-price">200 EUR</span>
+                                                </div>
+                                                <div class="product-item__action">
+                                                    <a href="javascript:void(0)" class="btn btn-primary">VIEW MORE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column col-4 col-xl-6 col-md-6 col-sm-12">
+                                        <div class="product-item">
+                                            <div class="product-item__img p-relative">
+                                                <img src="images/product-image.jpg" class="img-responsive">
+                                                <span class="product-item__cat p-absolute">Renault</span>
+                                                <span class="product-item__offer p-absolute">Offer: 2d remaining</span>
+                                            </div>
+                                            <div class="product-item__info">
+                                                <a class="product-item__name">Product title goes here with max work
+                                                    allowed</a>
+                                                <div class="product-review">
+                                                    <div class="product-review__rating">
+                                                        <div class="stars">
+                                                            <input type="radio" name="star" class="star-1" id="star-1">
+                                                            <label class="star-1" for="star-1">1</label>
+                                                            <input type="radio" name="star" class="star-2" id="star-2">
+                                                            <label class="star-2" for="star-2">2</label>
+                                                            <input type="radio" name="star" class="star-3" id="star-3">
+                                                            <label class="star-3" for="star-3">3</label>
+                                                            <input type="radio" name="star" class="star-4" id="star-4">
+                                                            <label class="star-4" for="star-4">4</label>
+                                                            <input type="radio" name="star" class="star-5" id="star-5">
+                                                            <label class="star-5" for="star-5">5</label>
+                                                            <span></span>
+                                                        </div>
+                                                    </div>
+                                                    <span>222 Reviews</span>
+                                                </div>
+                                                <div class="product-item__price d-flex">
+                                                    <span class="old-price">$300.00</span>
+                                                    <span class="new-price">$250.00</span>
+                                                    <span class="euro-price">200 EUR</span>
+                                                </div>
+                                                <div class="product-item__action">
+                                                    <a href="javascript:void(0)" class="btn btn-primary">VIEW MORE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column col-4 col-xl-6 col-md-6 col-sm-12">
+                                        <div class="product-item">
+                                            <div class="product-item__img p-relative">
+                                                <img src="images/product-image.jpg" class="img-responsive">
+                                                <span class="product-item__cat p-absolute">Renault</span>
+                                                <span class="product-item__offer p-absolute">Offer: 2d remaining</span>
+                                            </div>
+                                            <div class="product-item__info">
+                                                <a class="product-item__name">Product title goes here with max work
+                                                    allowed</a>
+                                                <div class="product-review">
+                                                    <div class="product-review__rating">
+                                                        <div class="stars">
+                                                            <input type="radio" name="star" class="star-1" id="star-1">
+                                                            <label class="star-1" for="star-1">1</label>
+                                                            <input type="radio" name="star" class="star-2" id="star-2">
+                                                            <label class="star-2" for="star-2">2</label>
+                                                            <input type="radio" name="star" class="star-3" id="star-3">
+                                                            <label class="star-3" for="star-3">3</label>
+                                                            <input type="radio" name="star" class="star-4" id="star-4">
+                                                            <label class="star-4" for="star-4">4</label>
+                                                            <input type="radio" name="star" class="star-5" id="star-5">
+                                                            <label class="star-5" for="star-5">5</label>
+                                                            <span></span>
+                                                        </div>
+                                                    </div>
+                                                    <span>222 Reviews</span>
+                                                </div>
+                                                <div class="product-item__price d-flex">
+                                                    <span class="old-price">$300.00</span>
+                                                    <span class="euro-price">200 EUR</span>
+                                                </div>
+                                                <div class="product-item__action">
+                                                    <a href="javascript:void(0)" class="btn btn-primary">VIEW MORE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column col-4 col-xl-6 col-md-6 col-sm-12">
+                                        <div class="product-item">
+                                            <div class="product-item__img p-relative">
+                                                <img src="images/product-image.jpg" class="img-responsive">
+                                                <span class="product-item__cat p-absolute">Renault</span>
+                                                <span class="product-item__offer p-absolute">Offer: 2d remaining</span>
+                                            </div>
+                                            <div class="product-item__info">
+                                                <a class="product-item__name">Product title goes here with max work
+                                                    allowed</a>
+                                                <div class="product-review">
+                                                    <div class="product-review__rating">
+                                                        <div class="stars">
+                                                            <input type="radio" name="star" class="star-1" id="star-1">
+                                                            <label class="star-1" for="star-1">1</label>
+                                                            <input type="radio" name="star" class="star-2" id="star-2">
+                                                            <label class="star-2" for="star-2">2</label>
+                                                            <input type="radio" name="star" class="star-3" id="star-3">
+                                                            <label class="star-3" for="star-3">3</label>
+                                                            <input type="radio" name="star" class="star-4" id="star-4">
+                                                            <label class="star-4" for="star-4">4</label>
+                                                            <input type="radio" name="star" class="star-5" id="star-5">
+                                                            <label class="star-5" for="star-5">5</label>
+                                                            <span></span>
+                                                        </div>
+                                                    </div>
+                                                    <span>222 Reviews</span>
+                                                </div>
+                                                <div class="product-item__price d-flex">
+                                                    <span class="old-price">$300.00</span>
+                                                    <span class="euro-price">200 EUR</span>
+                                                </div>
+                                                <div class="product-item__action">
+                                                    <a href="javascript:void(0)" class="btn btn-primary">VIEW MORE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column col-4 col-xl-6 col-md-6 col-sm-12">
+                                        <div class="product-item">
+                                            <div class="product-item__img p-relative">
+                                                <img src="images/product-image.jpg" class="img-responsive">
+                                                <span class="product-item__cat p-absolute">Renault</span>
+                                                <span class="product-item__offer p-absolute">Offer: 2d remaining</span>
+                                            </div>
+                                            <div class="product-item__info">
+                                                <a class="product-item__name">Product title goes here with max work
+                                                    allowed</a>
+                                                <div class="product-review">
+                                                    <div class="product-review__rating">
+                                                        <div class="stars">
+                                                            <input type="radio" name="star" class="star-1" id="star-1">
+                                                            <label class="star-1" for="star-1">1</label>
+                                                            <input type="radio" name="star" class="star-2" id="star-2">
+                                                            <label class="star-2" for="star-2">2</label>
+                                                            <input type="radio" name="star" class="star-3" id="star-3">
+                                                            <label class="star-3" for="star-3">3</label>
+                                                            <input type="radio" name="star" class="star-4" id="star-4">
+                                                            <label class="star-4" for="star-4">4</label>
+                                                            <input type="radio" name="star" class="star-5" id="star-5">
+                                                            <label class="star-5" for="star-5">5</label>
+                                                            <span></span>
+                                                        </div>
+                                                    </div>
+                                                    <span>222 Reviews</span>
+                                                </div>
+                                                <div class="product-item__price d-flex">
+                                                    <span class="old-price">$300.00</span>
+                                                    <span class="new-price">$250.00</span>
+                                                    <span class="euro-price">200 EUR</span>
+                                                </div>
+                                                <div class="product-item__action">
+                                                    <a href="javascript:void(0)" class="btn btn-primary">VIEW MORE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column col-4 col-xl-6 col-md-6 col-sm-12">
+                                        <div class="product-item">
+                                            <div class="product-item__img p-relative">
+                                                <img src="images/product-image.jpg" class="img-responsive">
+                                                <span class="product-item__cat p-absolute">Renault</span>
+                                                <span class="product-item__offer p-absolute">Offer: 2d remaining</span>
+                                            </div>
+                                            <div class="product-item__info">
+                                                <a class="product-item__name">Product title goes here with max work
+                                                    allowed</a>
+                                                <div class="product-review">
+                                                    <div class="product-review__rating">
+                                                        <div class="stars">
+                                                            <input type="radio" name="star" class="star-1" id="star-1">
+                                                            <label class="star-1" for="star-1">1</label>
+                                                            <input type="radio" name="star" class="star-2" id="star-2">
+                                                            <label class="star-2" for="star-2">2</label>
+                                                            <input type="radio" name="star" class="star-3" id="star-3">
+                                                            <label class="star-3" for="star-3">3</label>
+                                                            <input type="radio" name="star" class="star-4" id="star-4">
+                                                            <label class="star-4" for="star-4">4</label>
+                                                            <input type="radio" name="star" class="star-5" id="star-5">
+                                                            <label class="star-5" for="star-5">5</label>
+                                                            <span></span>
+                                                        </div>
+                                                    </div>
+                                                    <span>222 Reviews</span>
+                                                </div>
+                                                <div class="product-item__price d-flex">
+                                                    <span class="old-price">$300.00</span>
+                                                    <span class="euro-price">200 EUR</span>
+                                                </div>
+                                                <div class="product-item__action">
+                                                    <a href="javascript:void(0)" class="btn btn-primary">VIEW MORE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column col-4 col-xl-6 col-md-6 col-sm-12">
+                                        <div class="product-item">
+                                            <div class="product-item__img p-relative">
+                                                <img src="images/product-image.jpg" class="img-responsive">
+                                                <span class="product-item__cat p-absolute">Renault</span>
+                                                <span class="product-item__offer p-absolute">Offer: 2d remaining</span>
+                                            </div>
+                                            <div class="product-item__info">
+                                                <a class="product-item__name">Product title goes here with max work
+                                                    allowed</a>
+                                                <div class="product-review">
+                                                    <div class="product-review__rating">
+                                                        <div class="stars">
+                                                            <input type="radio" name="star" class="star-1" id="star-1">
+                                                            <label class="star-1" for="star-1">1</label>
+                                                            <input type="radio" name="star" class="star-2" id="star-2">
+                                                            <label class="star-2" for="star-2">2</label>
+                                                            <input type="radio" name="star" class="star-3" id="star-3">
+                                                            <label class="star-3" for="star-3">3</label>
+                                                            <input type="radio" name="star" class="star-4" id="star-4">
+                                                            <label class="star-4" for="star-4">4</label>
+                                                            <input type="radio" name="star" class="star-5" id="star-5">
+                                                            <label class="star-5" for="star-5">5</label>
+                                                            <span></span>
+                                                        </div>
+                                                    </div>
+                                                    <span>222 Reviews</span>
+                                                </div>
+                                                <div class="product-item__price d-flex">
+                                                    <span class="old-price">$300.00</span>
+                                                    <span class="euro-price">200 EUR</span>
+                                                </div>
+                                                <div class="product-item__action">
+                                                    <a href="javascript:void(0)" class="btn btn-primary">VIEW MORE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagination-wrap d-flex">
+                                <ul class="pagination">
+                                    <li class="page-item active">
+                                        <a href="javascript:void(0)">1</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="javascript:void(0)">2</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="javascript:void(0)">3</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <span>...</span>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="javascript:void(0)">31</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="cols">
+                <div class="column col-5 col-lg-6 col-md-12">
+                    <div class="footer-block">
+                        <h3 class="footer-block__title">Pages</h3>
+                        <div class="footer-block__nav d-flex">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)">Updates</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">FAQ</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)">Vendors</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Ethics</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-5 col-lg-6 col-md-12">
+                    <div class="footer-block">
+                        <h3 class="footer-block__title">Pages</h3>
+                        <div class="footer-block__nav d-flex">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)">Updates</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">FAQ</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)">Vendors</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Ethics</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-2 col-lg-12 col-md-12">
+                    <div class="footer-logo">
+                        <a href="javascript:void(0)">
+                            <img src="images/footer-logo.png" alt="MasterPlan" class="img-responsive">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
