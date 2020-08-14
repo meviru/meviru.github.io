@@ -1205,7 +1205,7 @@ select {
   transition: 0.2s ease all;
   -webkit-box-shadow: 0 0 5px -4px rgba(0, 0, 0, 0.8);
           box-shadow: 0 0 5px -4px rgba(0, 0, 0, 0.8);
-  background: linear-gradient(40deg, #ec7f20 10%, #f15fcc 56%);
+  background: linear-gradient(137deg, #ec7f20 0%, #ec7f20 45%, rgba(0, 0, 0, 0.504622) 100%);
 }
 
 .action:before, .action:after {
@@ -1217,7 +1217,7 @@ select {
   color: #fff;
   -webkit-transition: 0.2s ease all;
   transition: 0.2s ease all;
-  background: linear-gradient(40deg, #ff5acd 0%, #ec7f20 100%);
+  background: linear-gradient(-137deg, #ec7f20 0%, #ec7f20 45%, rgba(0, 0, 0, 0.504622) 100%);
   background-position: right center;
 }
 
@@ -1230,7 +1230,7 @@ select {
 .action.action-outline:hover {
   color: #fff;
   border-color: transparent;
-  background: linear-gradient(40deg, #ff5acd 0%, #ec7f20 100%);
+  background: linear-gradient(137deg, #ec7f20 0%, #ec7f20 45%, rgba(0, 0, 0, 0.504622) 100%);
   background-position: right center;
 }
 
@@ -1462,7 +1462,7 @@ select {
   margin: 0 auto;
   border-radius: 50%;
   background-color: #ec7f20;
-  background-image: linear-gradient(62deg, #ec7f20 0%, #ff6a88 100%);
+  background: linear-gradient(137deg, #ec7f20 0%, #ec7f20 45%, black 100%) !important;
 }
 
 .c-feature__icon svg {
@@ -1619,7 +1619,7 @@ select {
   background-color: #ec7f20;
   -webkit-box-shadow: 0 0 5px -4px rgba(0, 0, 0, 0.8);
           box-shadow: 0 0 5px -4px rgba(0, 0, 0, 0.8);
-  background-image: linear-gradient(45deg, #ec7f20 0%, #ff5acd 100%);
+  background: linear-gradient(137deg, #ec7f20 0%, #ec7f20 45%, black 100%);
 }
 
 .c-testimonial .c-testi-item__inner:before {
@@ -1823,7 +1823,7 @@ select {
   text-align: center;
   color: #fff;
   background-color: #ec7f20;
-  background-image: linear-gradient(45deg, #ec7f20 0%, #ff5acd 100%);
+  background: linear-gradient(175deg, #ec7f20 0%, #ec7f20 45%, black 100%);
 }
 
 .social-wrapper {

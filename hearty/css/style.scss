@@ -1378,7 +1378,12 @@ select {
   vertical-align: middle;
   transition: 0.2s ease all;
   box-shadow: 0 0 5px -4px rgba($black, 0.8);
-  background: linear-gradient(40deg, $primary 10%, #f15fcc 56%);
+  background: linear-gradient(
+    137deg,
+    $primary 0%,
+    $primary 45%,
+    rgba(0, 0, 0, 0.5046219171262255) 100%
+  );
   &:before,
   &:after {
     content: none;
@@ -1387,7 +1392,12 @@ select {
   &:hover {
     color: $white;
     transition: 0.2s ease all;
-    background: linear-gradient(40deg, #ff5acd 0%, $primary 100%);
+    background: linear-gradient(
+      -137deg,
+      $primary 0%,
+      $primary 45%,
+      rgba(0, 0, 0, 0.5046219171262255) 100%
+    );
     background-position: right center;
   }
   &.action-outline {
@@ -1397,7 +1407,12 @@ select {
     &:hover {
       color: $white;
       border-color: transparent;
-      background: linear-gradient(40deg, #ff5acd 0%, $primary 100%);
+      background: linear-gradient(
+        137deg,
+        $primary 0%,
+        $primary 45%,
+        rgba(0, 0, 0, 0.5046219171262255) 100%
+      );
       background-position: right center;
     }
   }
@@ -1576,7 +1591,12 @@ select {
     margin: 0 auto;
     border-radius: 50%;
     background-color: $primary;
-    background-image: linear-gradient(62deg, $primary 0%, #ff6a88 100%);
+    background: linear-gradient(
+      137deg,
+      $primary 0%,
+      $primary 45%,
+      rgba(0, 0, 0, 1) 100%
+    ) !important;
     svg {
       width: 45px;
       fill: $white;
@@ -1705,7 +1725,12 @@ select {
       border-radius: 5px;
       background-color: $primary;
       box-shadow: 0 0 5px -4px rgba($black, 0.8);
-      background-image: linear-gradient(45deg, $primary 0%, #ff5acd 100%);
+      background: linear-gradient(
+        137deg,
+        $primary 0%,
+        $primary 45%,
+        rgba(0, 0, 0, 1) 100%
+      );
       &:before {
         position: absolute;
         content: "";
@@ -1884,7 +1909,12 @@ select {
   text-align: center;
   color: $white;
   background-color: $primary;
-  background-image: linear-gradient(45deg, $primary 0%, #ff5acd 100%);
+  background: linear-gradient(
+    175deg,
+    $primary 0%,
+    $primary 45%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
 .social-wrapper {
