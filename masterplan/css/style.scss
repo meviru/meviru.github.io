@@ -1106,7 +1106,7 @@ select {
   }
   .product-detail-list {
     list-style: none;
-    width: 250px;
+    width: 200px;
     margin: 0;
     max-width: 100%;
     li {
@@ -1123,8 +1123,8 @@ select {
     }
   }
   .product-description {
-    padding: 35px 0;
-    margin-top: 35px;
+    padding: 25px 0;
+    margin-top: 25px;
     border-top: 1px solid #eeeeee;
     &__text {
       color: $black;
@@ -1239,6 +1239,13 @@ select {
       text-align: left;
     }
   }
+  .category-product-info {
+    .category-tabs {
+      > .category-tab-content {
+        padding: 15px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 840px) {
@@ -1288,6 +1295,27 @@ select {
     img {
       max-width: 195px;
     }
+  }
+
+  .category-detail {
+    .product-carousel {
+      &__img {
+        min-height: 400px;
+      }
+    }
+    &__inner-left {
+      margin-bottom: 20px;
+    }
+    .qty-wrapper {
+      &__actions {
+        width: 100%;
+        max-width: 450px;
+      }
+    }
+  }
+
+  .similar-products {
+    margin-top: 0;
   }
 }
 
@@ -1362,6 +1390,70 @@ select {
   .footer-logo {
     img {
       max-width: 145px;
+    }
+  }
+
+  .category-detail {
+    .product-carousel {
+      &__img {
+        min-height: 250px;
+      }
+    }
+    .price-wrapper {
+      .current-price {
+        font-size: 25px;
+        line-height: 25px;
+      }
+      .euro-price {
+        font-size: 15px;
+      }
+    }
+    .qty-wrapper {
+      &__actions {
+        .btn {
+          font-size: 14px;
+          font-weight: 700;
+          min-height: 50px;
+        }
+      }
+      &__bottom {
+        .btn {
+          width: calc(50% - 5px);
+        }
+      }
+    }
+  }
+
+  .category-product-info {
+    .block-title {
+      font-size: 20px;
+      line-height: 22px;
+      margin-bottom: 20px;
+    }
+    .product-description {
+      &__text {
+        font-size: 16px;
+      }
+    }
+    .product-details {
+      flex-direction: column-reverse;
+    }
+    .sku-info {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .review-wrapper {
+      .review-item {
+        &__text {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .section-title {
+    &__h2 {
+      font-size: 30px;
     }
   }
 }

@@ -1283,7 +1283,7 @@ select {
 
 .category-product-info .product-detail-list {
   list-style: none;
-  width: 250px;
+  width: 200px;
   margin: 0;
   max-width: 100%;
 }
@@ -1308,8 +1308,8 @@ select {
 }
 
 .category-product-info .product-description {
-  padding: 35px 0;
-  margin-top: 35px;
+  padding: 25px 0;
+  margin-top: 25px;
   border-top: 1px solid #eeeeee;
 }
 
@@ -1421,6 +1421,9 @@ select {
   .site-footer .footer-logo {
     text-align: left;
   }
+  .category-product-info .category-tabs > .category-tab-content {
+    padding: 15px;
+  }
 }
 
 @media screen and (max-width: 840px) {
@@ -1460,6 +1463,19 @@ select {
   }
   .footer-logo img {
     max-width: 195px;
+  }
+  .category-detail .product-carousel__img {
+    min-height: 400px;
+  }
+  .category-detail__inner-left {
+    margin-bottom: 20px;
+  }
+  .category-detail .qty-wrapper__actions {
+    width: 100%;
+    max-width: 450px;
+  }
+  .similar-products {
+    margin-top: 0;
   }
 }
 
@@ -1513,6 +1529,48 @@ select {
   }
   .footer-logo img {
     max-width: 145px;
+  }
+  .category-detail .product-carousel__img {
+    min-height: 250px;
+  }
+  .category-detail .price-wrapper .current-price {
+    font-size: 25px;
+    line-height: 25px;
+  }
+  .category-detail .price-wrapper .euro-price {
+    font-size: 15px;
+  }
+  .category-detail .qty-wrapper__actions .btn {
+    font-size: 14px;
+    font-weight: 700;
+    min-height: 50px;
+  }
+  .category-detail .qty-wrapper__bottom .btn {
+    width: calc(50% - 5px);
+  }
+  .category-product-info .block-title {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+  .category-product-info .product-description__text {
+    font-size: 16px;
+  }
+  .category-product-info .product-details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .category-product-info .sku-info {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .category-product-info .review-wrapper .review-item__text {
+    font-size: 16px;
+  }
+  .section-title__h2 {
+    font-size: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */
