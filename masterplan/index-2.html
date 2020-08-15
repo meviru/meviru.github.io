@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterPlan</title>
+    <link rel="stylesheet" href="css/spectre.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__top">
+            <div class="container">
+                <div class="cols">
+                    <div class="site-header--nav d-flex">
+                        <div class="site-header__currency">
+                            <div class="dropdown">
+                                <a href="javascript:void(0)" class="btn btn-primary text-light dropdown-toggle"
+                                    tabindex="0">USD</a>
+                                <ul class="menu">
+                                    <li>
+                                        <a href="javascript:void(0)">GBP</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">CAD</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="site-header__account">
+                            <a href="javascript:void(0)" class="btn text-light btn-primary">My Account</a>
+                        </div>
+                    </div>
+                    <div class="site-header--option d-flex">
+                        <a href="javascript:void(0)"
+                            class="p-relative d-inline-block site-header--option__icon site-header--option__icon-msg">
+                            <img class="img-responsive" src="images/mail-line.png">
+                            <span class="count p-absolute text-light d-flex s-circle">10</span>
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="p-relative d-inline-block site-header--option__icon site-header--option__icon-cart">
+                            <img class="img-responsive" src="images/shopping-cart-line.png">
+                            <span class="count p-absolute text-light d-flex s-circle">10</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-header__bottom">
+            <div class="container">
+                <div class="cols col-gapless">
+                    <div class="logo">
+                        <a href="javascript:void(0)" class="text-light">
+                            <img src="images/logo.png" alt="MasterPlan" class="img-responsive">
+                        </a>
+                    </div>
+                    <div class="site-header__bottom-right d-flex">
+                        <div class="site-user-info">
+                            <div class="dropdown site-user-info__name">
+                                <a href="javascript:void(0)" class="text-light d-flex dropdown-toggle" tabindex="0">
+                                    <div class="site-user-info__icon s-circle mx-2">
+                                        <img src="images/user-3-line.png" class="img-responsive s-circle">
+                                    </div>
+                                    <span>Username</span>
+                                </a>
+                                <ul class="menu">
+                                    <li>
+                                        <a href="javascript:void(0)">Messages</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">Account</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="site-notification">
+                            <div class="dropdown dropdown-right">
+                                <a href="javascript:void(0)" class="p-relative text-light d-flex dropdown-toggle"
+                                    tabindex="0">
+                                    <img src="images/notification-3-line.png">
+                                    <span class="p-absolute count s-circle d-flex">10</span>
+                                </a>
+                                <ul class="menu">
+                                    <li>
+                                        <a href="javascript:void(0)" class="d-flex p-relative noti-item">
+                                            <div class="noti-item__img s-circle d-flex">
+                                                <img class="img-responsive" src="images/user-3-line.png">
+                                            </div>
+                                            <div class="noti-item__desc">
+                                                <div class="noti-item__title">James liked your post: "Pure css
+                                                    notification
+                                                    box"
+                                                </div>
+                                                <div class="noti-item__date">11/7 - 2:30 pm</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="d-flex p-relative noti-item">
+                                            <div class="noti-item__img s-circle d-flex">
+                                                <img class="img-responsive" src="images/user-3-line.png">
+                                            </div>
+                                            <div class="noti-item__desc">
+                                                <div class="noti-item__title">James liked your post: "Pure css
+                                                    notification
+                                                    box"
+                                                </div>
+                                                <div class="noti-item__date">11/7 - 2:30 pm</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="d-flex p-relative noti-item">
+                                            <div class="noti-item__img s-circle d-flex">
+                                                <img class="img-responsive" src="images/user-3-line.png">
+                                            </div>
+                                            <div class="noti-item__desc">
+                                                <div class="noti-item__title">James liked your post: "Pure css
+                                                    notification
+                                                    box"
+                                                </div>
+                                                <div class="noti-item__date">11/7 - 2:30 pm</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="page-wrapper" id="page-wrapper">
+        <section class="category-detail">
+            <div class="container">
+                <div class="cols">
+                    <div class="column col-4 col-xl-4 col-md-12">
+                        <div class="category-detail__inner category-detail__inner-left">
+                            <div class="category-product-image">
+                                <div class="product-carousel d-flex">
+                                    <input type="radio" checked id="img-carousel1" name="img-carousel">
+                                    <img src="images/1.jpeg" class="img-responsive product-carousel__thumb">
+                                    <input type="radio" id="img-carousel2" name="img-carousel">
+                                    <img src="images/2.jpeg" class="img-responsive product-carousel__thumb">
+                                    <input type="radio" id="img-carousel3" name="img-carousel">
+                                    <img src="images/3.jpg" class="img-responsive product-carousel__thumb">
+                                    <input type="radio" id="img-carousel4" name="img-carousel">
+                                    <img src="images/4.jpg" class="img-responsive product-carousel__thumb">
+                                    <div class="product-carousel__img"></div>
+                                </div>
+                            </div>
+                            <div class="rating-wrapper d-flex">
+                                <div class="stars stars-4">
+                                    <span></span>
+                                </div>
+                                <a href="javascript:void(0)" class="rating-count">1 Rating</a>
+                            </div>
+                            <div class="price-wrapper d-flex">
+                                <label class="price-wrapper__label">Price</label>
+                                <div class="price-container">
+                                    <span class="current-price">$3299</span>
+                                    <span class="euro-price">999 eur</span>
+                                </div>
+                            </div>
+                            <div class="qty-wrapper">
+                                <div class="qty-item d-flex">
+                                    <label for="qty-input" class="qty-item__label">Quantity: </label>
+                                    <input type="number" value="2" class="qty-item__input" name="qty">
+                                    <span class="qty-item__more">More Quantity</span>
+                                </div>
+                                <div class="qty-wrapper__actions">
+                                    <button type="button" class="btn btn-primary qty-wrapper__action">
+                                        <img src="images/shopping-cart-line.png" width="30">
+                                        Start Transaction
+                                    </button>
+                                    <div class="qty-wrapper__bottom d-flex">
+                                        <button type="button" class="btn btn-primary qty-wrapper__action">
+                                            Add Whishlist
+                                        </button>
+                                        <button type="button" class="btn btn-primary qty-wrapper__action">
+                                            Add to Others
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column col-8 col-xl-8 col-md-12">
+                        <div class="category-detail__inner-right">
+                            <div class="category-product-info">
+                                <div class="category-tabs d-flex">
+                                    <input type="radio" name="tab" id="tab1" checked>
+                                    <label for="tab1">Details</label>
+                                    <div class="category-tab-content">
+                                        <div class="product-details d-flex">
+                                            <div class="product-details__left">
+                                                <h3 class="block-title">Product Details</h3>
+                                                <ul class="product-detail-list">
+                                                    <li>
+                                                        <strong>Price:</strong>
+                                                        <span>$222</span>
+                                                    </li>
+                                                    <li>
+                                                        <strong>Quantity:</strong>
+                                                        <span>1</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-details__right">
+                                                <div class="sku-info">
+                                                    <span class="sku-info__number">Seir1942 [4]</span>
+                                                    <span class="sku-info__date">POSTED ON 25 OCT 2014</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-description">
+                                            <h3 class="block-title">Vendor's Description</h3>
+                                            <div class="product-description__text">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae magnam
+                                                dolorum, expedita laboriosam repellendus facilis earum, ipsa error illum
+                                                aut possimus cumque exercitationem amet doloribus repudiandae! Cumque
+                                                itaque blanditiis alias. Lorem ipsum dolor sit amet consectetur
+                                                adipisicing elit. Assumenda impedit doloremque totam temporibus
+                                                voluptatibus earum magnam cumque distinctio libero! Reiciendis, ducimus
+                                                magnam repudiandae delectus perspiciatis odio eaque commodi numquam
+                                                dolorum.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <input type="radio" name="tab" id="tab2">
+                                    <label for="tab2">FAQ</label>
+                                    <div class="category-tab-content">
+                                        <h3 class="block-title">Reviews</h3>
+                                        <div class="review-wrapper">
+                                            <div class="review-item">
+                                                <p class="review-item__text">PERFECT, WILL COME BACK AGAIN!</p>
+                                                <div class="stars stars-4">
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="review-item">
+                                                <p class="review-item__text">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing elit. Ea tempore ullam accusamus eum delectus voluptates
+                                                    hic alias nemo dicta aliquam expedita beatae qui officiis earum
+                                                    maiores, illum quae? Fugiat, nulla?</p>
+                                                <div class="stars stars-4">
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="review-item">
+                                                <p class="review-item__text">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing elit.</p>
+                                                <div class="stars stars-4">
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="review-item">
+                                                <p class="review-item__text">Lorem ipsum dolor, sit amet consectetur
+                                                    adipisicing elit. Explicabo, veniam? Accusamus sunt voluptatibus
+                                                    deserunt sint corporis dicta culpa asperiores neque optio, facilis
+                                                    nostrum quasi maxime incidunt modi voluptate quae ex?</p>
+                                                <div class="stars stars-4">
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <section class="similar-products">
+                <div class="section-title">
+                    <h2 class="section-title__h2">YOU MAY LIKE</h2>
+                </div>
+                <div class="product-grid">
+                    <div class="cols">
+                        <div class="column col-4 col-xl-6 col-md-6 col-sm-12">
+                            <div class="product-item">
+                                <div class="product-item__img p-relative">
+                                    <img src="images/product-image.jpg" class="img-responsive">
+                                    <span class="product-item__cat p-absolute">Renault</span>
+                                    <span class="product-item__offer p-absolute">Offer: 2d remaining</span>
+                                </div>
+                                <div class="product-item__info">
+                                    <a class="product-item__name">Product title goes here with max work
+                                        allowed</a>
+                                    <div class="product-review">
+                                        <div class="product-review__rating">
+                                            <div class="stars">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <span>222 Reviews</span>
+                                    </div>
+                                    <div class="product-item__price d-flex">
+                                        <span class="old-price">$300.00</span>
+                                        <span class="new-price">$250.00</span>
+                                        <span class="euro-price">200 EUR</span>
+                                    </div>
+                                    <div class="product-item__action">
+                                        <a href="javascript:void(0)" class="btn btn-primary">VIEW MORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column col-4 col-xl-6 col-md-6 col-sm-12">
+                            <div class="product-item">
+                                <div class="product-item__img p-relative">
+                                    <img src="images/product-image.jpg" class="img-responsive">
+                                    <span class="product-item__cat p-absolute">Renault</span>
+                                    <span class="product-item__offer p-absolute">Offer: 2d remaining</span>
+                                </div>
+                                <div class="product-item__info">
+                                    <a class="product-item__name">Product title goes here with max work
+                                        allowed</a>
+                                    <div class="product-review">
+                                        <div class="product-review__rating">
+                                            <div class="stars stars-4">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <span>222 Reviews</span>
+                                    </div>
+                                    <div class="product-item__price d-flex">
+                                        <span class="old-price">$300.00</span>
+                                        <span class="euro-price">200 EUR</span>
+                                    </div>
+                                    <div class="product-item__action">
+                                        <a href="javascript:void(0)" class="btn btn-primary">VIEW MORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column col-4 col-xl-6 col-md-6 col-sm-12">
+                            <div class="product-item">
+                                <div class="product-item__img p-relative">
+                                    <img src="images/product-image.jpg" class="img-responsive">
+                                    <span class="product-item__cat p-absolute">Renault</span>
+                                    <span class="product-item__offer p-absolute">Offer: 2d remaining</span>
+                                </div>
+                                <div class="product-item__info">
+                                    <a class="product-item__name">Product title goes here with max work
+                                        allowed</a>
+                                    <div class="product-review">
+                                        <div class="product-review__rating">
+                                            <div class="stars">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <span>222 Reviews</span>
+                                    </div>
+                                    <div class="product-item__price d-flex">
+                                        <span class="old-price">$300.00</span>
+                                        <span class="euro-price">200 EUR</span>
+                                    </div>
+                                    <div class="product-item__action">
+                                        <a href="javascript:void(0)" class="btn btn-primary">VIEW MORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column col-4 col-xl-6 col-md-6 col-sm-12">
+                            <div class="product-item">
+                                <div class="product-item__img p-relative">
+                                    <img src="images/product-image.jpg" class="img-responsive">
+                                    <span class="product-item__cat p-absolute">Renault</span>
+                                    <span class="product-item__offer p-absolute">Offer: 2d remaining</span>
+                                </div>
+                                <div class="product-item__info">
+                                    <a class="product-item__name">Product title goes here with max work
+                                        allowed</a>
+                                    <div class="product-review">
+                                        <div class="product-review__rating">
+                                            <div class="stars stars-5">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <span>222 Reviews</span>
+                                    </div>
+                                    <div class="product-item__price d-flex">
+                                        <span class="old-price">$300.00</span>
+                                        <span class="new-price">$250.00</span>
+                                        <span class="euro-price">200 EUR</span>
+                                    </div>
+                                    <div class="product-item__action">
+                                        <a href="javascript:void(0)" class="btn btn-primary">VIEW MORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column col-4 col-xl-6 col-md-6 col-sm-12">
+                            <div class="product-item">
+                                <div class="product-item__img p-relative">
+                                    <img src="images/product-image.jpg" class="img-responsive">
+                                    <span class="product-item__cat p-absolute">Renault</span>
+                                    <span class="product-item__offer p-absolute">Offer: 2d remaining</span>
+                                </div>
+                                <div class="product-item__info">
+                                    <a class="product-item__name">Product title goes here with max work
+                                        allowed</a>
+                                    <div class="product-review">
+                                        <div class="product-review__rating">
+                                            <div class="stars stars-2">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <span>222 Reviews</span>
+                                    </div>
+                                    <div class="product-item__price d-flex">
+                                        <span class="old-price">$300.00</span>
+                                        <span class="euro-price">200 EUR</span>
+                                    </div>
+                                    <div class="product-item__action">
+                                        <a href="javascript:void(0)" class="btn btn-primary">VIEW MORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column col-4 col-xl-6 col-md-6 col-sm-12">
+                            <div class="product-item">
+                                <div class="product-item__img p-relative">
+                                    <img src="images/product-image.jpg" class="img-responsive">
+                                    <span class="product-item__cat p-absolute">Renault</span>
+                                    <span class="product-item__offer p-absolute">Offer: 2d remaining</span>
+                                </div>
+                                <div class="product-item__info">
+                                    <a class="product-item__name">Product title goes here with max work
+                                        allowed</a>
+                                    <div class="product-review">
+                                        <div class="product-review__rating">
+                                            <div class="stars">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <span>222 Reviews</span>
+                                    </div>
+                                    <div class="product-item__price d-flex">
+                                        <span class="old-price">$300.00</span>
+                                        <span class="euro-price">200 EUR</span>
+                                    </div>
+                                    <div class="product-item__action">
+                                        <a href="javascript:void(0)" class="btn btn-primary">VIEW MORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="cols">
+                <div class="column col-5 col-lg-6 col-md-12">
+                    <div class="footer-block">
+                        <h3 class="footer-block__title">Pages</h3>
+                        <div class="footer-block__nav d-flex">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)">Updates</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">FAQ</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)">Vendors</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Ethics</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-5 col-lg-6 col-md-12">
+                    <div class="footer-block">
+                        <h3 class="footer-block__title">Pages</h3>
+                        <div class="footer-block__nav d-flex">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)">Updates</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">FAQ</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)">Vendors</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Ethics</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-2 col-lg-12 col-md-12">
+                    <div class="footer-logo">
+                        <a href="javascript:void(0)">
+                            <img src="images/footer-logo.png" alt="MasterPlan" class="img-responsive">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
