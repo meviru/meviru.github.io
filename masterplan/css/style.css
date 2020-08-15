@@ -575,70 +575,40 @@ select {
   font-weight: 600;
 }
 
-.category-listing .product-filters__sorting .dropdown {
+.category-listing .product-filters__sorting .custom-select {
+  position: relative;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-}
-
-.category-listing .product-filters__sorting .dropdown .dropdown-toggle {
-  position: relative;
-  font-size: 16px;
   z-index: 2;
-  font-weight: 600;
+  width: 135px;
+  max-width: 100%;
+  background: #f5f5f5;
   margin-left: 10px;
-  padding: 5px 10px;
-  padding-right: 40px;
-  background-color: #f5f5f5;
 }
 
-.category-listing .product-filters__sorting .dropdown .dropdown-toggle:before {
+.category-listing .product-filters__sorting .custom-select:after {
   position: absolute;
   content: "";
+  width: 35px;
+  height: 35px;
   top: 0;
   right: 0;
-  bottom: 0;
-  width: 30px;
   z-index: -1;
-  background-color: #cccccc;
+  background: #cccccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 14l-4-4h8z'/%3E%3C/svg%3E") no-repeat;
+  background-position: center right -2px;
+  background-size: 40px;
 }
 
-.category-listing .product-filters__sorting .dropdown .dropdown-toggle:after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  right: 10px;
-  height: 0;
-  width: 0;
-  z-index: 2;
-  margin-top: 1px;
-  border-left: 0.4em solid transparent;
-  border-right: 0.4em solid transparent;
-  border-top: 0.4em solid #555;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.category-listing .product-filters__sorting .dropdown .menu {
-  padding: 0;
-  margin-top: 5px;
-}
-
-.category-listing .product-filters__sorting .dropdown .menu > li {
-  margin: 0;
-}
-
-.category-listing .product-filters__sorting .dropdown .menu > li > a {
-  color: #000;
-  display: block;
-  padding: 8px 10px;
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
-}
-
-.category-listing .product-filters__sorting .dropdown .menu > li > a:hover {
-  color: #000;
-  background-color: rgba(0, 0, 0, 0.1);
+.category-listing .product-filters__sorting select {
+  border: none;
+  height: 35px;
+  width: 100%;
+  font-size: 15px;
+  padding: 0 5px;
+  font-weight: 600;
+  padding-right: 40px;
+  background: transparent;
 }
 
 .category-listing .product-filters__action .btn {
@@ -1383,6 +1353,9 @@ select {
   .container {
     max-width: 1280px;
   }
+  .category-listing .product-filters__sorting > label {
+    white-space: nowrap;
+  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -1402,9 +1375,6 @@ select {
   }
   .category-listing .product-filters__sorting {
     margin-top: 20px;
-  }
-  .category-listing .product-filters__sorting > label {
-    white-space: nowrap;
   }
   .category-listing .product-filters__action {
     margin-top: 20px;
@@ -1496,14 +1466,14 @@ select {
   .category-listing .product-filters {
     padding: 15px 5px;
   }
-  .category-listing .product-filters [class^="product-filters__"] {
+  .category-listing .product-filters [class^="product-filters"] {
     margin: 0;
     margin-bottom: 15px;
   }
-  .category-listing .product-filters [class^="product-filters__"]:last-child {
+  .category-listing .product-filters [class^="product-filters"]:last-child {
     margin-bottom: 0;
   }
-  .category-listing .product-filters [class^="product-filters__"]:before, .category-listing .product-filters [class^="product-filters__"]:after {
+  .category-listing .product-filters [class^="product-filters"]:before, .category-listing .product-filters [class^="product-filters"]:after {
     display: none;
   }
   .category-listing .product-filters__sorting {
@@ -1514,18 +1484,13 @@ select {
     display: block;
     margin-bottom: 5px;
   }
-  .category-listing .product-filters__sorting .dropdown {
+  .category-listing .product-filters__sorting .custom-select {
     display: block;
     width: 100%;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
-  }
-  .category-listing .product-filters__sorting .dropdown .dropdown-toggle {
     margin-left: 0;
-  }
-  .category-listing .product-filters__sorting .dropdown .menu {
-    position: static;
   }
   .footer-logo img {
     max-width: 145px;

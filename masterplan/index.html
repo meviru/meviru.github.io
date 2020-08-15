@@ -232,34 +232,25 @@
                     <div class="column col-9 col-xl-8 col-md-12">
                         <div class="product-list">
                             <div class="product-filters">
-                                <form action="#">
+                                <form action="javascript:void(0)">
                                     <div class="cols">
                                         <div class="product-filters__searchbox column col-4 col-xl-6 col-sm-12">
-                                            <input type="text" name="searchtext" placeholder="Looking for something?"
-                                                required>
+                                            <input type="text" name="searchtext" placeholder="Looking for something?">
                                         </div>
                                         <div class="product-filters__dropdown column col-3 col-xl-6 col-sm-12">
-                                            <select name="listing" required>
+                                            <select name="listing">
                                                 <option value="Listing">Listing</option>
                                                 <option value="Listing">Listing 2</option>
                                             </select>
                                         </div>
                                         <div class="product-filters__sorting column col-3 col-xl-6 col-sm-12 d-flex">
                                             <label>Sory result by:</label>
-                                            <div class="dropdown dropdown-right">
-                                                <a href="javascript:void(0)" class="text-dark d-flex dropdown-toggle"
-                                                    tabindex="0">Rating</a>
-                                                <ul class="menu">
-                                                    <li>
-                                                        <a href="javascript:void(0)">Rating</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0)">Price</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:void(0)">Type</a>
-                                                    </li>
-                                                </ul>
+                                            <div class="custom-select">
+                                                <select name="sort">
+                                                    <option value="Rating">Rating</option>
+                                                    <option value="Price">Price</option>
+                                                    <option value="Type">Type</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="product-filters__action column col-2 col-xl-6 col-sm-12">
