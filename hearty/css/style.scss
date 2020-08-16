@@ -1440,8 +1440,7 @@ select {
       @include flex-center();
       transition: 0.2s ease;
       img {
-        max-width: 40px;
-        margin-right: 8px;
+        max-width: 200px;
       }
     }
   }
@@ -1997,7 +1996,15 @@ select {
 @media screen and (max-width: 767px) {
   .site-header {
     padding: 15px;
+    .logo {
+      a {
+        > img {
+          max-width: 150px;
+        }
+      }
+    }
   }
+  
   .nav-toggle {
     position: absolute;
     display: block;
@@ -2085,7 +2092,7 @@ select {
     }
   }
   .site-header--fixed {
-    padding: 10px 15px;
+    padding: 15px;
     .nav-toggle {
       span {
         background-color: $text-color;

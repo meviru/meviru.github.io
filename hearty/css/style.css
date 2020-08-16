@@ -1275,8 +1275,7 @@ select {
 }
 
 .site-header .logo > a img {
-  max-width: 40px;
-  margin-right: 8px;
+  max-width: 200px;
 }
 
 .nav-toggle {
@@ -1909,6 +1908,9 @@ select {
   .site-header {
     padding: 15px;
   }
+  .site-header .logo a > img {
+    max-width: 150px;
+  }
   .nav-toggle {
     position: absolute;
     display: block;
@@ -2011,7 +2013,7 @@ select {
     opacity: 1;
   }
   .site-header--fixed {
-    padding: 10px 15px;
+    padding: 15px;
   }
   .site-header--fixed .nav-toggle span {
     background-color: #262626;
