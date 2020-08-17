@@ -352,77 +352,6 @@ select {
         }
       }
     }
-    .sidebar-categories {
-      margin: 0;
-      padding: 15px;
-      list-style: none;
-      li {
-        margin: 0;
-      }
-      &__item {
-        position: relative;
-        z-index: 2;
-        &.parent {
-          > .cat-name {
-            padding-left: 25px;
-          }
-        }
-        .cat-name {
-          display: flex;
-          font-size: 16px;
-          color: $text-color;
-          margin-bottom: 10px;
-          @include flex-align-center();
-          &__icon {
-            padding: 5px;
-            width: 30px;
-            height: 30px;
-            background-color: #e0e0d1;
-          }
-          strong {
-            font-weight: 600;
-          }
-        }
-      }
-      &__icon {
-        cursor: pointer;
-        position: absolute;
-        top: 10px;
-        left: 0;
-        width: 14px;
-        height: 14px;
-        z-index: -1;
-        border-top: 8px solid $text-color;
-        border-left: 7px solid transparent;
-        border-right: 7px solid transparent;
-      }
-      &__checkbox {
-        cursor: pointer;
-        position: absolute;
-        top: 5px;
-        left: 0;
-        opacity: 0;
-        width: 18px;
-        height: 18px;
-        &:checked {
-          ~ .sub-cat {
-            display: block;
-          }
-        }
-      }
-      .sub-cat {
-        display: none;
-        padding-left: 45px;
-        .cat-name {
-          color: lighten($text-color, 40%);
-        }
-        .sidebar-categories__item {
-          &.parent {
-            margin-left: -25px;
-          }
-        }
-      }
-    }
     .agent-block {
       padding: 10px;
       border-radius: 4px;
@@ -455,6 +384,9 @@ select {
         font-weight: 600;
         line-height: 20px;
       }
+    }
+    .sidebar-categories {
+      padding: 15px;
     }
   }
 
@@ -554,6 +486,78 @@ select {
             background: lighten($black, 5%) !important;
           }
         }
+      }
+    }
+  }
+}
+
+.sidebar-categories {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    margin: 0;
+  }
+  &__item {
+    position: relative;
+    z-index: 2;
+    &.parent {
+      > .cat-name {
+        padding-left: 25px;
+      }
+    }
+    .cat-name {
+      display: flex;
+      font-size: 16px;
+      color: $text-color;
+      margin-bottom: 10px;
+      @include flex-align-center();
+      &__icon {
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        background-color: #e0e0d1;
+      }
+      strong {
+        font-weight: 600;
+      }
+    }
+  }
+  &__icon {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    z-index: -1;
+    border-top: 8px solid $text-color;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+  }
+  &__checkbox {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    opacity: 0;
+    width: 18px;
+    height: 18px;
+    &:checked {
+      ~ .sub-cat {
+        display: block;
+      }
+    }
+  }
+  .sub-cat {
+    display: none;
+    padding-left: 45px;
+    .cat-name {
+      color: lighten($text-color, 40%);
+    }
+    .sidebar-categories__item {
+      &.parent {
+        margin-left: -25px;
       }
     }
   }
@@ -670,10 +674,10 @@ select {
     overflow: hidden;
     margin-bottom: 15px;
     background-color: $white;
+    height: calc(100% - 15px);
     box-shadow: 0 0 5px -4px rgba($black, 0.5);
     &__img {
       overflow: hidden;
-      max-height: 224px;
       img {
         width: 100%;
         object-fit: cover;
@@ -1370,6 +1374,12 @@ select {
   .footer-logo {
     img {
       max-width: 145px;
+    }
+  }
+
+  .product-grid {
+    .product-item {
+      height: auto;
     }
   }
 
