@@ -11,7 +11,11 @@
 <body class="admin-body">
     <header class="header">
         <div class="row">
-            <div class="header__left">&nbsp;</div>
+            <div class="header__left">&nbsp;
+                <div class="toggle-btn">
+                    <span></span>
+                </div>
+            </div>
             <div class="header__right">
                 <div class="header-noti">
                     <div class="header-noti__inner">
@@ -22,7 +26,7 @@
                 <div class="header-user">
                     <div class="header-user__inner">
                         <span class="header-user__icon">
-                            <img src="https://i.pravatar.cc/400?img=12">
+                            <img src="https://dummyimage.com/50">
                         </span>
                         <span class="header-user__name">John Doe</span>
                     </div>
@@ -32,6 +36,9 @@
     </header>
     <main class="main" id="main">
         <aside class="sidebar">
+            <div class="sidebar-close">
+                <span></span>
+            </div>
             <div class="logo">
                 <a href="javascript:void(0)"><i data-feather="framer"></i> Logo</a>
             </div>
@@ -125,6 +132,14 @@
         $(document).ready(function () {
             // feather icons
             feather.replace();
+
+            $(".toggle-btn").click(function (e) {
+                $(".sidebar").toggleClass('active');
+            });
+
+            $(".sidebar-close").click(function (e) {
+                $(".sidebar").removeClass('active');
+            });
         });
     </script>
 </body>

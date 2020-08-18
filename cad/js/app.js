@@ -16,6 +16,7 @@ $(document).ready(function () {
 
     $("#openProductDetail, .openProductDetail").click(function () {
         $(".product-detail-sidebar").addClass("active");
+        $(".cart-sidebar").removeClass('active');
     });
 
     $(".product-detail-sidebar .cart-title__close, #action-close").click(function () {
@@ -29,4 +30,20 @@ $(document).ready(function () {
         $(this).toggleClass('active');
         $(this).children(".submenu").stop().slideToggle(300);
     });
+
+    $(".toggle-btn").click(function(e){
+        $(".sidebar").toggleClass('active');
+    });
+
+    $(".sidebar-close").click(function(e){
+        $(".sidebar").removeClass('active');
+    });
+
+    $(".cart-toggle").click(function(e){
+        $(".cart-sidebar").toggleClass('active');
+    });
+
+    $(".cart-close").click(function(e){
+        $(".cart-sidebar").removeClass('active');
+    })
 });
