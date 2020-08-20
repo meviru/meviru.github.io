@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+$black: #000;
+$white: #fff;
+$primary: #6becf1;
+$primary-dark: #5ccbd0;
+$primary-extradark: #347476;
+$text-color: #262626;
+$grey-bg: #eceeee;
+$text-grey: #b9b9b9;
+$black-alt: #060d0e;
+
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  border: none;
+  max-width: 100%;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+}
+
+body {
+  color: $text-color;
+  overflow-x: hidden;
+  font: normal 16px/1.4 "Poppins", sans-serif;
+}
+
+input,
+button,
+textarea,
+select {
+  outline: none;
+  appearance: none;
+  font: normal 16px/1.4 "Poppins", sans-serif;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-justify-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.action {
+  border: none;
+  color: $white;
+  padding: 10px;
+  font-size: 16px;
+  min-width: 140px;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 4px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  transition: 0.2s ease color, 0.2s ease background;
+  box-shadow: 0 0 5px -4px rgba($black, 0.8);
+  background: $primary-dark;
+  &:before,
+  &:after {
+    content: none;
+    display: none;
+  }
+  &:hover {
+    color: $white;
+    transition: 0.2s ease all;
+    background: $primary-dark;
+  }
+  &.action-outline {
+    color: $primary-dark;
+    border: 1px solid $primary-dark;
+    background: transparent;
+    &:hover {
+      color: $white;
+      border-color: transparent;
+      background: $primary-dark;
+    }
+  }
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 15px 0;
+  background-color: $white;
+  box-shadow: 0 0 5px -4px rgba($black, 0.8);
+  transition: 0.35s cubic-bezier(0.075, 0.82, 0.165, 1) padding;
+  .row {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    position: relative;
+    z-index: 3;
+    > a {
+      color: $white;
+      font-size: 25px;
+      font-weight: 500;
+      transition: 0.2s ease;
+      img {
+        max-width: 200px;
+        display: block;
+      }
+    }
+  }
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.site-nav {
+  display: block;
+  ul {
+    > li {
+      margin-left: 30px;
+      &:last-child {
+        margin-left: 20px;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      > a {
+        font-size: 15px;
+        display: block;
+        font-weight: 500;
+        line-height: 18px;
+        color: $text-color;
+        transition: color 0.2s ease;
+        text-transform: uppercase;
+        &.action {
+          color: $white;
+          min-width: auto;
+          &:hover {
+            color: $white;
+          }
+        }
+        &.action-outline {
+          color: $primary-dark;
+        }
+        &:hover {
+          color: $primary-dark;
+        }
+      }
+    }
+  }
+}
+
+.page-wrapper {
+  padding-top: 79px;
+}
+
+.c-hero {
+  position: relative;
+  z-index: 2;
+  min-height: 700px;
+  background: url("../images/hero-bg.jpg") no-repeat center/cover;
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.6;
+    background: $black;
+  }
+}
+
+.c-hero-content {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.c-hero-slider {
+  max-width: 100%;
+  .c-hero-slide {
+    color: $white;
+    &__title {
+      font-size: 4rem;
+      line-height: 1.15;
+      font-weight: 600;
+      margin-top: 5px;
+      padding-bottom: 5px;
+    }
+    &__desc {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+  }
+}
+
+.c-hero-stores {
+  margin-top: 40px;
+  &__title {
+    font-size: 0.85rem;
+    color: $white;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+  }
+  > a {
+    display: inline-block;
+    vertical-align: middle;
+    &:last-of-type {
+      margin-left: 10px;
+    }
+    > img {
+      max-width: 150px;
+      display: block;
+    }
+  }
+}
+
+.c-sp-8 {
+  padding: 80px 0;
+}
+
+.c-title {
+  text-align: center;
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+  &__sub-title {
+    color: $text-grey;
+    font-size: 1rem;
+    font-weight: 300;
+    max-width: 700px;
+    margin: 1rem auto 0 auto;
+  }
+}
+
+.c-experience {
+  .c-exp-img {
+    margin-top: 50px;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+.c-more {
+  text-align: center;
+  margin-top: 50px;
+  > .action {
+    text-transform: uppercase;
+  }
+}
+
+.c-sf-match {
+  background-color: $grey-bg;
+}
+
+.c-sf-wrap {
+  margin-top: 50px;
+  [class^='col'] {
+    margin-bottom: 20px;
+  }
+  .c-sf-item {
+    height: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: $white;
+    box-shadow: 0 0 5px -4px rgba($black, 0.4);
+    &__img {
+      position: relative;
+      overflow: hidden;
+      img {
+        display: block;
+        transition: 0.6s ease;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    &__info {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      color: $white;
+      padding: 5px 15px;
+      background-color: rgba($primary-dark, 0.7);
+    }
+    &__name {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    &__post {
+      font-size: 0.85rem;
+      font-weight: 300;
+    }
+    &__feed {
+      padding: 15px;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      font-weight: 300;
+    }
+  }
+}
+
+.cd-top {
+  position: fixed;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  bottom: -50px;
+  right: -50px;
+  color: $white;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  background: $black-alt;
+  border: 1px solid transparent;
+  transition: all 0.5s ease;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 0;
+    right: 0;
+    top: 42%;
+    margin: auto;
+    transform: rotate(135deg);
+    border-left: 2px solid $white;
+    border-bottom: 2px solid $white;
+  }
+  @media screen and (max-width: 767px) {
+    width: 40px;
+    height: 40px;
+    &:before {
+      width: 10px;
+      height: 10px;
+    }
+  }
+  &.cd-is-visible {
+    bottom: 50px;
+    right: 50px;
+    @media screen and (max-width: 767px) {
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+}
+
+@keyframes bringIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
