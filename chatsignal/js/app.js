@@ -47,10 +47,16 @@ $(document).ready(function () {
         $(this).stop().toggleClass('active');
         $(".site-header").stop().toggleClass("site-header--nav-active")
         $(".site-nav").stop().toggleClass("site-nav--active");
+        $(".lang-dropdown").removeClass('active');
     });
 
     $(".site-nav > ul > li > a").click(function () {
         $(".nav-toggle").stop().removeClass('active');
         $(".site-nav").stop().removeClass("site-nav--active");
+    })
+
+    $(".lang-translator").click(function(e){
+        e.preventDefault();
+        $(".lang-dropdown").toggleClass('active');
     })
 });
