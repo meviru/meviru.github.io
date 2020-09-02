@@ -37,12 +37,16 @@
                 <li><a href="javascript:void(0)">Apps</a></li>
                 <li><a href="javascript:void(0)">Kontakt</a></li>
                 <li class="action-cta">
-                  <a class="action action-outline" href="javascript:void(0)"
+                  <a
+                    class="cd-signin action action-outline"
+                    href="javascript:void(0)"
                     >LOGIN</a
                   >
                 </li>
                 <li class="action-cta">
-                  <a class="action" href="javascript:void(0)">REGISTRIEREN</a>
+                  <a class="cd-signup action" href="javascript:void(0)"
+                    >REGISTRIEREN</a
+                  >
                 </li>
               </ul>
             </nav>
@@ -131,7 +135,10 @@
             </p>
           </div>
           <div class="c-exp-img">
-            <img src="images/responsive-devices-black.jpg" alt="User experience" />
+            <img
+              src="images/responsive-devices-black.jpg"
+              alt="User experience"
+            />
           </div>
         </div>
       </section>
@@ -606,6 +613,67 @@
           </div>
         </div>
       </section>
+      <section class="c-faq c-sp-5">
+        <div class="container">
+          <div class="c-title">
+            <h2 class="c-title__title">Frequently Asked Questions</h2>
+          </div>
+          <div class="faq-wrapper">
+            <div class="faq-item">
+              <a href="javascript:void(0)" class="faq-item--title"
+                >How do I change my password?</a
+              >
+              <p class="faq-item--content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
+                quidem blanditiis delectus corporis, possimus officia sint sequi
+                ex tenetur id impedit est pariatur iure animi non a ratione
+                reiciendis nihil sed consequatur atque repellendus fugit
+                perspiciatis rerum et. <a href="javascript:void(0)">Dolorum consequuntur</a> fugit deleniti,
+                soluta fuga nobis.
+              </p>
+            </div>
+            <div class="faq-item">
+              <a href="javascript:void(0)" class="faq-item--title"
+                >How do I change my password?</a
+              >
+              <p class="faq-item--content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
+                quidem blanditiis delectus corporis, possimus officia sint sequi
+                ex tenetur id impedit est pariatur iure animi non a ratione
+                reiciendis nihil sed consequatur atque repellendus fugit
+                perspiciatis rerum et. Dolorum consequuntur fugit deleniti,
+                soluta fuga nobis.
+              </p>
+            </div>
+            <div class="faq-item">
+              <a href="javascript:void(0)" class="faq-item--title"
+                >How do I change my password?</a
+              >
+              <p class="faq-item--content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
+                quidem blanditiis delectus corporis, possimus officia sint sequi
+                ex tenetur id impedit est pariatur iure animi non a ratione
+                reiciendis nihil sed consequatur atque repellendus fugit
+                perspiciatis rerum et. Dolorum consequuntur fugit deleniti,
+                soluta fuga nobis.
+              </p>
+            </div>
+            <div class="faq-item">
+              <a href="javascript:void(0)" class="faq-item--title"
+                >How do I change my password?</a
+              >
+              <p class="faq-item--content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
+                quidem blanditiis delectus corporis, possimus officia sint sequi
+                ex tenetur id impedit est pariatur iure animi non a ratione
+                reiciendis nihil sed consequatur atque repellendus fugit
+                perspiciatis rerum et. Dolorum consequuntur fugit deleniti,
+                soluta fuga nobis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="c-contact c-sp-8">
         <div class="container">
           <div class="c-title">
@@ -652,9 +720,7 @@
     <footer class="site-footer">
       <div class="container">
         <div class="row no-gutters">
-          <div class="copyright">
-            Copyright &copy; 2020 by ChatSignal
-          </div>
+          <div class="copyright">Copyright &copy; 2020 by ChatSignal</div>
           <div class="footer-nav">
             <a href="javascript:void(0)">AGB</a>
             <a href="javascript:void(0)">Impressum</a>
@@ -663,6 +729,168 @@
         </div>
       </div>
     </footer>
+
+    <div class="cd-user-modal">
+      <!-- this is the entire modal form, including the background -->
+      <div class="cd-user-modal-container">
+        <!-- this is the container wrapper -->
+        <ul class="cd-switcher">
+          <li><a href="javascript:void(0)" class="selected">Einloggen</a></li>
+          <li><a href="javascript:void(0)">Neues Konto</a></li>
+        </ul>
+
+        <div id="cd-login" class="is-selected">
+          <!-- log in form -->
+          <form action="javascript:void(0)" class="cd-form">
+            <p class="fieldset">
+              <input
+                class="full-width has-border"
+                id="signin-email"
+                type="email"
+                placeholder="Email"
+              />
+              <span class="cd-error-message">Error message here!</span>
+            </p>
+
+            <p class="fieldset">
+              <input
+                class="full-width has-border"
+                id="signin-password"
+                type="text"
+                placeholder="Passwort"
+              />
+              <span class="cd-error-message">Error message here!</span>
+            </p>
+
+            <p class="fieldset">
+              <input class="full-width" type="submit" value="Login" />
+            </p>
+            <p class="fieldset">
+              <button
+                type="button"
+                class="full-width action-fw action-fw-google"
+              >
+                <span><img src="../images/icon-google.svg" /></span> Login with
+                Google
+              </button>
+            </p>
+            <p class="fieldset">
+              <button
+                type="button"
+                class="full-width action-fw action-fw-facebook"
+              >
+                <span><img src="../images/icon-facebook.svg" /></span> Login
+                with Facebook
+              </button>
+            </p>
+          </form>
+
+          <p class="cd-form-bottom-message">
+            <a href="javascript:void(0)">Passwort vergessen?</a>
+          </p>
+          <a href="javascript:void(0)" class="cd-close-form">Close</a>
+        </div>
+        <!-- cd-login -->
+
+        <div id="cd-signup">
+          <!-- sign up form -->
+          <form action="javascript:void(0)" class="cd-form">
+            <p class="fieldset">
+              <input
+                class="full-width has-border"
+                id="signup-username"
+                type="text"
+                placeholder="Nutzername"
+              />
+              <span class="cd-error-message">Error message here!</span>
+            </p>
+
+            <p class="fieldset">
+              <input
+                class="full-width has-border"
+                id="signup-email"
+                type="email"
+                placeholder="Email"
+              />
+              <span class="cd-error-message">Error message here!</span>
+            </p>
+
+            <p class="fieldset">
+              <input
+                class="full-width has-border"
+                id="signup-password"
+                type="text"
+                placeholder="Passwort"
+              />
+              <span class="cd-error-message">Error message here!</span>
+            </p>
+
+            <p class="fieldset">
+              <input type="checkbox" id="accept-terms" />
+              <label for="accept-terms"
+                >Ich akzeptiere die <a href="javascript:void(0)">AGB</a> und die
+                <a href="javascript:void(0)">Datenschutzbestimmungen</a></label
+              >
+            </p>
+
+            <p class="fieldset">
+              <input class="full-width" type="submit" value="Konto erstellen" />
+            </p>
+            <p class="fieldset">
+              <button
+                type="button"
+                class="full-width action-fw action-fw-google"
+              >
+                <span><img src="../images/icon-google.svg" /></span> Login with
+                Google
+              </button>
+            </p>
+            <p class="fieldset">
+              <button
+                type="button"
+                class="full-width action-fw action-fw-facebook"
+              >
+                <span><img src="../images/icon-facebook.svg" /></span> Login
+                with Facebook
+              </button>
+            </p>
+          </form>
+        </div>
+        <!-- cd-signup -->
+
+        <div id="cd-reset-password">
+          <!-- reset password form -->
+          <p class="cd-form-message">
+            Passwort vergessen? Geben Sie bitte Ihre Email-Adresse ein. Sie
+            erhalten einen Link zum Erstellen eines neuen Passworts.
+          </p>
+
+          <form action="javascript:void(0)" class="cd-form">
+            <p class="fieldset">
+              <input
+                class="full-width has-border"
+                id="reset-email"
+                type="email"
+                placeholder="Email"
+              />
+              <span class="cd-error-message">Error message here!</span>
+            </p>
+
+            <p class="fieldset">
+              <input class="full-width" type="submit" value="Reset password" />
+            </p>
+          </form>
+
+          <p class="cd-form-bottom-message">
+            <a href="javascript:void(0)">Zurück zur Anmeldung</a>
+          </p>
+        </div>
+        <!-- cd-reset-password -->
+        <a href="javascript:void(0)" class="cd-close-form">Close</a>
+      </div>
+      <!-- cd-user-modal-container -->
+    </div>
+    <!-- cd-user-modal -->
     <a href="javascript:void(0)" class="cd-top"></a>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
