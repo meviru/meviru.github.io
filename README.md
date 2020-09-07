@@ -40,7 +40,6 @@ I have almost around 4 years of experience in IT industries working with differe
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Sites Developed
-* [ChatSignal](https://meviru.github.io/chatsignal/index.html)
 * [GoHub](https://meviru.github.io/gohub/index.html)
 * [ShowTrackr](https://meviru.github.io/showtrackr/index.html)
 * [PhyLab](https://viralpatel.xyz/phylab/index.html)
