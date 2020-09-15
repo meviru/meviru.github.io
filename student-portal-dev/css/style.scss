@@ -499,6 +499,30 @@ select {
           &.blue {
             background: #bd10e0;
           }
+          &.transparent {
+            position: relative;
+            background: transparent;
+            border: 1px solid lighten($black, 70%);
+            &:before,
+            &:after {
+              position: absolute;
+              content: " ";
+              height: 14px;
+              width: 2px;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              margin: auto;
+              background-color: #d0021b;
+            }
+            &:before {
+              transform: rotate(45deg);
+            }
+            &:after {
+              transform: rotate(-45deg);
+            }
+          }
         }
       }
       &--context-menu {
@@ -545,7 +569,7 @@ select {
         padding: 10px 0 10px 43px;
         background-color: $white;
         box-shadow: 2px 2px 4px -1px rgba($black, 0.25);
-        
+
         &:after {
           display: none;
           position: absolute;
