@@ -11407,6 +11407,82 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
       (0, _jquery.default)(".modal-wrapper.active").removeClass("active");
     }
   });
+  (0, _jquery.default)(".user-work--tabs > a").click(function (e) {
+    e.preventDefault();
+    var dataURL = (0, _jquery.default)(this).attr("data-href");
+    (0, _jquery.default)(".user-work--tabs > a").removeClass("active");
+    (0, _jquery.default)(this).addClass("active");
+    (0, _jquery.default)(".user-work-tab-content").removeClass("active");
+    (0, _jquery.default)("#" + dataURL).addClass("active");
+  });
+  (0, _jquery.default)(".user-work--nav li a").click(function (e) {
+    e.preventDefault();
+    var dataHref = (0, _jquery.default)(this).attr("data-href");
+    (0, _jquery.default)(".user-work--nav li a").parent().siblings().removeClass("active");
+    (0, _jquery.default)(this).parent().addClass("active");
+
+    if (dataHref != "all") {
+      (0, _jquery.default)(".user-work-tab-content .col-post").hide();
+      (0, _jquery.default)("." + dataHref).show();
+    } else {
+      (0, _jquery.default)(".user-work-tab-content .col-post").show();
+    }
+  }); //post inner sideshow
+
+  (0, _jquery.default)(".col-post--inner").click(function (e) {
+    e.preventDefault();
+    (0, _jquery.default)("body").addClass("modal-open");
+    modalBackdrop.fadeIn();
+    setTimeout(function () {
+      (0, _jquery.default)("#post-preview-modal").addClass("active");
+    }, 200);
+  });
+  var slideIndex = 1;
+  showSlides(slideIndex); // Next/previous controls
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  (0, _jquery.default)(".post-gallery--nav-prev").click(function (e) {
+    plusSlides(-1);
+  });
+  (0, _jquery.default)(".post-gallery--nav-next").click(function (e) {
+    plusSlides(1);
+  }); // Thumbnail image controls
+
+  (0, _jquery.default)(".post-gallery--dot").click(function (e) {
+    var idNumber = (0, _jquery.default)(this).attr("data-post-item");
+    showSlides(slideIndex = idNumber);
+  });
+
+  function showSlides(n) {
+    var i;
+    var slides = document.querySelectorAll(".post-gallery--item");
+    var dots = document.querySelectorAll(".post-gallery--dot");
+
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      slides[i].classList.remove("animate");
+    }
+
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    slides[slideIndex - 1].classList.add("animate");
+    dots[slideIndex - 1].className += " active";
+  }
+
   (0, _jquery.default)("body,html").click(function (e) {
     filterDropdown.removeClass("active");
     contextMenu.removeClass("active");
@@ -11445,7 +11521,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56770" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54317" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

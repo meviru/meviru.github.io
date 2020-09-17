@@ -184,12 +184,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"C:/Users/Sai/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/sv-profile-style.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./font\\icon-custom.eot":[["icon-custom.e51d0ec1.eot","css/font/icon-custom.eot"],"css/font/icon-custom.eot"],"./font\\icon-custom.woff2":[["icon-custom.e7852373.woff2","css/font/icon-custom.woff2"],"css/font/icon-custom.woff2"],"./font\\icon-custom.woff":[["icon-custom.e45cf5f5.woff","css/font/icon-custom.woff"],"css/font/icon-custom.woff"],"./font\\icon-custom.ttf":[["icon-custom.2e11ee61.ttf","css/font/icon-custom.ttf"],"css/font/icon-custom.ttf"],"./font\\icon-custom.svg":[["icon-custom.7c4d5bb0.svg","css/font/icon-custom.svg"],"css/font/icon-custom.svg"],"./..\\images\\arrow.png":[["arrow.dd9de399.png","images/arrow.png"],"images/arrow.png"],"./..\\images\\arrow-left-1.svg":[["arrow-left-1.0dab4ff6.svg","images/arrow-left-1.svg"],"images/arrow-left-1.svg"],"./..\\images\\arrow-right-1.svg":[["arrow-right-1.522521e3.svg","images/arrow-right-1.svg"],"images/arrow-right-1.svg"],"./..\\images\\arrow-circle-left.svg":[["arrow-circle-left.2f34ceb5.svg","images/arrow-circle-left.svg"],"images/arrow-circle-left.svg"],"./..\\images\\arrow-circle-right.svg":[["arrow-circle-right.50022ea6.svg","images/arrow-circle-right.svg"],"images/arrow-circle-right.svg"],"_css_loader":"C:/Users/Sai/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"C:/Users/Sai/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./bundle-url":"C:/Users/Sai/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"C:/Users/Sai/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -394,4 +389,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["C:/Users/Sai/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/sv-profile-style.8fb3d06c.js.map
+//# sourceMappingURL=/index-2.js.map

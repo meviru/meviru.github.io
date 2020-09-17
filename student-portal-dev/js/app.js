@@ -215,6 +215,82 @@ $(document).ready(function () {
     }
   });
 
+  $(".user-work--tabs > a").click(function (e) {
+    e.preventDefault();
+    var dataURL = $(this).attr("data-href");
+    $(".user-work--tabs > a").removeClass("active");
+    $(this).addClass("active");
+    $(".user-work-tab-content").removeClass("active");
+    $("#" + dataURL).addClass("active");
+  });
+
+  $(".user-work--nav li a").click(function (e) {
+    e.preventDefault();
+    var dataHref = $(this).attr("data-href");
+    $(".user-work--nav li a").parent().siblings().removeClass("active");
+    $(this).parent().addClass("active");
+    if (dataHref != "all") {
+      $(".user-work-tab-content .col-post").hide();
+      $("." + dataHref).show();
+    } else {
+      $(".user-work-tab-content .col-post").show();
+    }
+  });
+
+  //post inner sideshow
+  $(".col-post--inner").click(function (e) {
+    e.preventDefault();
+    $("body").addClass("modal-open");
+    modalBackdrop.fadeIn();
+    setTimeout(function () {
+      $("#post-preview-modal").addClass("active");
+    }, 200);
+  });
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
+  }
+
+  $(".post-gallery--nav-prev").click(function (e) {
+    plusSlides(-1);
+  });
+
+  $(".post-gallery--nav-next").click(function (e) {
+    plusSlides(1);
+  });
+
+  // Thumbnail image controls
+  $(".post-gallery--dot").click(function (e) {
+    var idNumber = $(this).attr("data-post-item");
+    showSlides((slideIndex = idNumber));
+  });
+
+  function showSlides(n) {
+    var i;
+    var slides = document.querySelectorAll(".post-gallery--item");
+    var dots = document.querySelectorAll(".post-gallery--dot");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      slides[i].classList.remove("animate");
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    slides[slideIndex - 1].classList.add("animate");
+    dots[slideIndex - 1].className += " active";
+  }
+
   $("body,html").click(function (e) {
     filterDropdown.removeClass("active");
     contextMenu.removeClass("active");

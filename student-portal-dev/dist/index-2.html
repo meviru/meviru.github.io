@@ -105,12 +105,20 @@
             <nav class="user-work--nav">
               <ul>
                 <li class="active">
-                  <a href="javascript:void(0)">All Works</a>
+                  <a data-href="all" href="javascript:void(0)">All Works</a>
                 </li>
-                <li><a href="javascript:void(0)">Academics</a></li>
-                <li><a href="javascript:void(0)">Honors</a></li>
-                <li><a href="javascript:void(0)">Extracurriculars</a></li>
-                <li><a href="javascript:void(0)">Ventures</a></li>
+                <li>
+                  <a data-href="Academics" href="javascript:void(0)">Academics</a>
+                </li>
+                <li>
+                  <a data-href="Honors" href="javascript:void(0)">Honors</a>
+                </li>
+                <li>
+                  <a data-href="Extracurriculars" href="javascript:void(0)">Extracurriculars</a>
+                </li>
+                <li>
+                  <a data-href="Ventures" href="javascript:void(0)">Ventures</a>
+                </li>
               </ul>
             </nav>
             <div class="user-work--add">
@@ -120,7 +128,7 @@
             </div>
             <div class="user-wrap--inner">
               <div class="user-work--tabs">
-                <a href="javascript:void(0)" class="user-work--tabs-tab active">
+                <a href="javascript:void(0)" data-href="user-work-content" class="user-work--tabs-tab active">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="5" y="14" width="5" height="4" rx="0.497" transform="rotate(-180 5 14)"></rect>
                     <rect x="5" y="8" width="5" height="8" rx="0.497" transform="rotate(-180 5 8)"></rect>
@@ -129,9 +137,9 @@
                   </svg>
                   <span> Works</span>
                 </a>
-                <a href="javascript:void(0)" class="user-work--tabs-tab">
+                <a href="javascript:void(0)" data-href="user-draft-content" class="user-work--tabs-tab">
                   <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g opacity="0.45">
+                    <g>
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8859 2.1439L9.99114 2.13288L8.37007 0.497102C8.04266 0.187187 7.61325 0.0101549 7.16429 0H2.1165C0.946297 0.00606122 0.000652493 0.96395 0 2.1439V12.8573C0.00467915 14.0416 0.957772 14.9993 2.13229 15H14.8677C15.4328 15.0026 15.9755 14.7779 16.3757 14.3757C16.776 13.9735 17.0007 13.427 17 12.8573V4.28658C17 3.1075 16.0553 2.14997 14.8859 2.1439Z" fill="black"></path>
                     </g>
                   </svg>
@@ -139,181 +147,176 @@
                   <span>Draft</span>
                 </a>
               </div>
-              <div class="col-post-wrapper">
-                <div class="row">
-                  <div class="private-profile">
-                    <img src="/icon-lock.7f685646.png">
-                    <h2 class="private-profile--title">
-                      This Account is Private
-                    </h2>
-                    <p class="private-profile--subtitle">
-                      Send them a friend request to see their works.
-                    </p>
-                  </div>
-                  <div class="col-md-4 col-post">
-                    <div class="col-post--inner">
-                      <div class="col-post--img">
-                        <img src="/item-post.955eecd1.png">
+              <div class="user-work--content">
+                <div class="private-profile">
+                  <img src="/icon-lock.7f685646.png">
+                  <h2 class="private-profile--title">
+                    This Account is Private
+                  </h2>
+                  <p class="private-profile--subtitle">
+                    Send them a friend request to see their works.
+                  </p>
+                </div>
+                <div id="user-work-content" class="user-work-tab-content active">
+                  <div class="row">
+                    <div class="col-md-4 col-post Academics">
+                      <div class="col-post--inner">
+                        <div class="col-post--img">
+                          <img src="/pexels-engin-akyurt-2098604.ad03f7c8.png">
+                        </div>
+                        <div class="col-post--info">
+                          <h2 class="col-post--title">AP Profile</h2>
+                          <p class="col-post--name">Academics</p>
+                        </div>
                       </div>
-                      <div class="col-post--info">
-                        <h2 class="col-post--title">AP Profile</h2>
-                        <p class="col-post--name">Academics</p>
+                    </div>
+                    <div class="col-md-4 col-post Academics">
+                      <div class="col-post--inner">
+                        <div class="col-post--img">
+                          <img src="/item-post.955eecd1.png">
+                        </div>
+                        <div class="col-post--info">
+                          <h2 class="col-post--title">Standardized Testing</h2>
+                          <p class="col-post--name">Academics</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-post Honors">
+                      <div class="col-post--inner">
+                        <div class="col-post--img">
+                          <img src="/item-post.955eecd1.png">
+                        </div>
+                        <div class="col-post--info">
+                          <h2 class="col-post--title">
+                            Breakthrough Junior Challenge Grand Champion Prize
+                          </h2>
+                          <p class="col-post--name">Honors</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-post Extracurriculars">
+                      <div class="col-post--inner">
+                        <div class="col-post--img">
+                          <img src="/item-post.955eecd1.png">
+                        </div>
+                        <div class="col-post--info">
+                          <h2 class="col-post--title">Varsity Basketball</h2>
+                          <p class="col-post--name">Extracurriculars</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-post Extracurriculars">
+                      <div class="col-post--inner">
+                        <div class="col-post--img">
+                          <img src="/item-post.955eecd1.png">
+                        </div>
+                        <div class="col-post--info">
+                          <h2 class="col-post--title">Varsity Basketball</h2>
+                          <p class="col-post--name">Extracurriculars</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-post Honors">
+                      <div class="col-post--inner">
+                        <div class="col-post--img">
+                          <img src="/item-post.955eecd1.png">
+                        </div>
+                        <div class="col-post--info">
+                          <h2 class="col-post--title">Varsity Basketball</h2>
+                          <p class="col-post--name">Honors</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-post Extracurriculars">
+                      <div class="col-post--inner">
+                        <div class="col-post--img">
+                          <img src="/item-post.955eecd1.png">
+                        </div>
+                        <div class="col-post--info">
+                          <h2 class="col-post--title">Varsity Basketball</h2>
+                          <p class="col-post--name">Extracurriculars</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-post Ventures">
+                      <div class="col-post--inner">
+                        <div class="col-post--img">
+                          <img src="/item-post.955eecd1.png">
+                        </div>
+                        <div class="col-post--info">
+                          <h2 class="col-post--title">Varsity Basketball</h2>
+                          <p class="col-post--name">Ventures</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-post Extracurriculars">
+                      <div class="col-post--inner">
+                        <div class="col-post--img">
+                          <img src="/item-post.955eecd1.png">
+                        </div>
+                        <div class="col-post--info">
+                          <h2 class="col-post--title">Varsity Basketball</h2>
+                          <p class="col-post--name">Extracurriculars</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-post Ventures">
+                      <div class="col-post--inner">
+                        <div class="col-post--img">
+                          <img src="/item-post.955eecd1.png">
+                        </div>
+                        <div class="col-post--info">
+                          <h2 class="col-post--title">Varsity Basketball</h2>
+                          <p class="col-post--name">Ventures</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-4 col-post">
-                    <div class="col-post--inner">
-                      <div class="col-post--img">
-                        <img src="/item-post.955eecd1.png">
-                      </div>
-                      <div class="col-post--info">
-                        <h2 class="col-post--title">Standardized Testing</h2>
-                        <p class="col-post--name">Academics</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-post">
-                    <div class="col-post--inner">
-                      <div class="col-post--img">
-                        <img src="/item-post.955eecd1.png">
-                      </div>
-                      <div class="col-post--info">
-                        <h2 class="col-post--title">
-                          Breakthrough Junior Challenge Grand Champion Prize
-                        </h2>
-                        <p class="col-post--name">Honors</p>
+                </div>
+                <div id="user-draft-content" class="user-work-tab-content">
+                  <div class="row">
+                    <div class="col-md-4 col-post Extracurriculars">
+                      <div class="col-post--inner">
+                        <div class="col-post--img">
+                          <img src="/item-post.955eecd1.png">
+                        </div>
+                        <div class="col-post--info">
+                          <h2 class="col-post--title">Varsity Basketball</h2>
+                          <p class="col-post--name">Extracurriculars</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-4 col-post">
-                    <div class="col-post--inner">
-                      <div class="col-post--img">
-                        <img src="/item-post.955eecd1.png">
-                      </div>
-                      <div class="col-post--info">
-                        <h2 class="col-post--title">Varsity Basketball</h2>
-                        <p class="col-post--name">Extracurriculars</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-post">
-                    <div class="col-post--inner">
-                      <div class="col-post--img">
-                        <img src="/item-post.955eecd1.png">
-                      </div>
-                      <div class="col-post--info">
-                        <h2 class="col-post--title">Varsity Basketball</h2>
-                        <p class="col-post--name">Extracurriculars</p>
+                    <div class="col-md-4 col-post Extracurriculars">
+                      <div class="col-post--inner">
+                        <div class="col-post--img">
+                          <img src="/item-post.955eecd1.png">
+                        </div>
+                        <div class="col-post--info">
+                          <h2 class="col-post--title">Varsity Basketball</h2>
+                          <p class="col-post--name">Extracurriculars</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-4 col-post">
-                    <div class="col-post--inner">
-                      <div class="col-post--img">
-                        <img src="/item-post.955eecd1.png">
-                      </div>
-                      <div class="col-post--info">
-                        <h2 class="col-post--title">Varsity Basketball</h2>
-                        <p class="col-post--name">Extracurriculars</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-post">
-                    <div class="col-post--inner">
-                      <div class="col-post--img">
-                        <img src="/item-post.955eecd1.png">
-                      </div>
-                      <div class="col-post--info">
-                        <h2 class="col-post--title">Varsity Basketball</h2>
-                        <p class="col-post--name">Extracurriculars</p>
+                    <div class="col-md-4 col-post Extracurriculars">
+                      <div class="col-post--inner">
+                        <div class="col-post--img">
+                          <img src="/item-post.955eecd1.png">
+                        </div>
+                        <div class="col-post--info">
+                          <h2 class="col-post--title">Varsity Basketball</h2>
+                          <p class="col-post--name">Extracurriculars</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-4 col-post">
-                    <div class="col-post--inner">
-                      <div class="col-post--img">
-                        <img src="/item-post.955eecd1.png">
-                      </div>
-                      <div class="col-post--info">
-                        <h2 class="col-post--title">Varsity Basketball</h2>
-                        <p class="col-post--name">Extracurriculars</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-post">
-                    <div class="col-post--inner">
-                      <div class="col-post--img">
-                        <img src="/item-post.955eecd1.png">
-                      </div>
-                      <div class="col-post--info">
-                        <h2 class="col-post--title">Varsity Basketball</h2>
-                        <p class="col-post--name">Extracurriculars</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-post">
-                    <div class="col-post--inner">
-                      <div class="col-post--img">
-                        <img src="/item-post.955eecd1.png">
-                      </div>
-                      <div class="col-post--info">
-                        <h2 class="col-post--title">Varsity Basketball</h2>
-                        <p class="col-post--name">Extracurriculars</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-post">
-                    <div class="col-post--inner">
-                      <div class="col-post--img">
-                        <img src="/item-post.955eecd1.png">
-                      </div>
-                      <div class="col-post--info">
-                        <h2 class="col-post--title">Varsity Basketball</h2>
-                        <p class="col-post--name">Extracurriculars</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-post">
-                    <div class="col-post--inner">
-                      <div class="col-post--img">
-                        <img src="/item-post.955eecd1.png">
-                      </div>
-                      <div class="col-post--info">
-                        <h2 class="col-post--title">Varsity Basketball</h2>
-                        <p class="col-post--name">Extracurriculars</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-post">
-                    <div class="col-post--inner">
-                      <div class="col-post--img">
-                        <img src="/item-post.955eecd1.png">
-                      </div>
-                      <div class="col-post--info">
-                        <h2 class="col-post--title">Varsity Basketball</h2>
-                        <p class="col-post--name">Extracurriculars</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-post">
-                    <div class="col-post--inner">
-                      <div class="col-post--img">
-                        <img src="/item-post.955eecd1.png">
-                      </div>
-                      <div class="col-post--info">
-                        <h2 class="col-post--title">Varsity Basketball</h2>
-                        <p class="col-post--name">Extracurriculars</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-post">
-                    <div class="col-post--inner">
-                      <div class="col-post--img">
-                        <img src="/item-post.955eecd1.png">
-                      </div>
-                      <div class="col-post--info">
-                        <h2 class="col-post--title">Varsity Basketball</h2>
-                        <p class="col-post--name">Extracurriculars</p>
+                    <div class="col-md-4 col-post Extracurriculars">
+                      <div class="col-post--inner">
+                        <div class="col-post--img">
+                          <img src="/item-post.955eecd1.png">
+                        </div>
+                        <div class="col-post--info">
+                          <h2 class="col-post--title">Varsity Basketball</h2>
+                          <p class="col-post--name">Extracurriculars</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -378,6 +381,72 @@ I am a designer. I am from America. I am currently residing in New York City. Fo
           </div>
           <div class="form-action">
             <button type="button" class="form-action--btn">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-wrapper" id="post-preview-modal">
+      <div class="post-preview">
+        <div class="row">
+          <div class="post-preview--nav">
+            <a class="post-preview--nav-prev"></a>
+            <a class="post-preview--nav-next"></a>
+          </div>
+          <div class="post-gallery">
+            <div class="post-gallery--inner">
+              <div class="post-gallery--item">
+                <img src="/pexels-engin-akyurt-2098604.ad03f7c8.png">
+              </div>
+              <div class="post-gallery--item">
+                <img src="/ScreenShot2020-08-20at3.3217PM.ac6056e8.png">
+              </div>
+            </div>
+            <div class="post-gallery--nav">
+              <a class="post-gallery--nav-prev"></a>
+              <a class="post-gallery--nav-next"></a>
+            </div>
+            <div class="post-gallery--dots">
+              <span class="post-gallery--dot" data-post-item="1"></span>
+              <span class="post-gallery--dot" data-post-item="2"></span>
+            </div>
+          </div>
+          <div class="post-info">
+            <div class="post-info--user">
+              <div class="post-info--user-img">
+                <img src="/pexels-daniel-xavier-1239291.4e2f44d6.png">
+              </div>
+              <div class="post-info--user-title">
+                <div class="post-info--user-name">
+                  <strong>Jonathan Loremi</strong>
+                  <span>Honors</span>
+                </div>
+                <p class="post-info--user-detail">
+                  Breakthrough Junior Challenge Grand Champion Prize
+                </p>
+              </div>
+              <div class="post-info--user-dropdown">
+                <a href="javascript:void(0)" class="post-info--user-dropdown-icon"><span></span></a>
+              </div>
+            </div>
+            <div class="post-info--detail">
+              <ul>
+                <li>
+                  <strong>Award Level</strong>
+                  <p>State/Regional</p>
+                </li>
+                <li>
+                  <strong>Grade Awarded in</strong>
+                  <p>12</p>
+                </li>
+                <li>
+                  <strong>Award Description</strong>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printings. Lorem
+                    Ipsum is simply dummy text of the printings.
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
