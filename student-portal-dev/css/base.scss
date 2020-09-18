@@ -266,10 +266,11 @@ select {
     &--choose {
       margin-bottom: 40px;
       select {
-        width: 500px;
         border: none;
         max-width: 100%;
         font-size: 28px;
+        display: inline-block;
+        vertical-align: middle;
         letter-spacing: -0.5px;
         @media screen and (max-width: 767px) {
           font-size: 22px;
@@ -298,6 +299,7 @@ select {
       .form-control {
         height: 36px;
         width: 100%;
+        display: block;
         font-size: 16px;
         font-weight: 300;
         padding: 5px 8px 0;
@@ -379,6 +381,15 @@ select {
         height: 230px;
         max-width: 100%;
         background-color: rgba($black, 0.2);
+      }
+      &--hint {
+        color: #bebebe;
+        font-size: 8px;
+        font-weight: 500;
+        position: absolute;
+        bottom: 3px;
+        right: 10px;
+        z-index: 2;
       }
     }
     .form-action {

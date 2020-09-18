@@ -237,6 +237,11 @@ $(document).ready(function () {
     }
   });
 
+  $(".col-post--visibility").click(function (e) {
+    e.stopPropagation();
+    $(this).toggleClass("active");
+  });
+
   //post inner sideshow
   $(".col-post--inner").click(function (e) {
     e.preventDefault();
@@ -265,7 +270,7 @@ $(document).ready(function () {
 
   // Thumbnail image controls
   $(".post-gallery--dot").click(function (e) {
-    var idNumber = $(this).attr("data-post-item");
+    var idNumber = parseInt($(this).attr("data-post-item"));
     showSlides((slideIndex = idNumber));
   });
 

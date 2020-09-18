@@ -81,6 +81,7 @@ body {
 }
 
 .user-wrap {
+  margin-top: 50px;
   &--profile {
     width: 275px;
     flex: 0 0 275px;
@@ -316,10 +317,32 @@ body {
       align-items: center;
       justify-content: center;
       &:hover {
-        .col-post--info {
+        .col-post--info,
+        .col-post--visibility {
           opacity: 1;
           visibility: visible;
         }
+      }
+    }
+    &--visibility {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 2;
+      width: 30px;
+      height: 25px;
+      opacity: 0;
+      display: block;
+      visibility: hidden;
+      transition: opacity 0.25s ease;
+      background: url("../images/eye-open.svg") no-repeat center center;
+      background-size: 29px;
+      &.active {
+        top: 16px;
+        opacity: 1;
+        visibility: visible;
+        background: url("../images/eye-close.svg") no-repeat center center;
+        background-size: 29px;
       }
     }
     &--img {
