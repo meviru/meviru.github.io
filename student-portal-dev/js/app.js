@@ -1,4 +1,5 @@
 import $ from "jquery";
+import mixitup from "mixitup";
 
 $(document).ready(function () {
   var root = document.documentElement,
@@ -149,16 +150,17 @@ $(document).ready(function () {
     }, 200);
   });
 
-  var unfriendModal = $("#user-profile--action-unfriend");
-  unfriendModal.click(function (e) {
-    e.preventDefault();
-    var dataId = $(this).attr("data-id");
-    $("body").addClass("modal-open");
-    modalBackdrop.fadeIn();
-    setTimeout(function () {
-      $("#" + dataId).addClass("active");
-    }, 200);
-  });
+  $("#user-profile--action-unfriend, #user-profile--action-unfriend-alt").click(
+    function (e) {
+      e.preventDefault();
+      var dataId = $(this).attr("data-id");
+      $("body").addClass("modal-open");
+      modalBackdrop.fadeIn();
+      setTimeout(function () {
+        $("#" + dataId).addClass("active");
+      }, 200);
+    }
+  );
 
   var userEdit = $("#user-profile--action-edit");
   userEdit.click(function (e) {
@@ -224,17 +226,9 @@ $(document).ready(function () {
     $("#" + dataURL).addClass("active");
   });
 
-  $(".user-work--nav li a").click(function (e) {
-    e.preventDefault();
-    var dataHref = $(this).attr("data-href");
-    $(".user-work--nav li a").parent().siblings().removeClass("active");
-    $(this).parent().addClass("active");
-    if (dataHref != "all") {
-      $(".user-work-tab-content .col-post").hide();
-      $("." + dataHref).show();
-    } else {
-      $(".user-work-tab-content .col-post").show();
-    }
+  $(".user-work--nav li").click(function (e) {
+    $(".user-work--nav li").removeClass("active");
+    $(this).addClass("active");
   });
 
   $(".col-post--visibility").click(function (e) {
@@ -303,5 +297,23 @@ $(document).ready(function () {
     if (sidebar != undefined) {
       sidebar.classList.remove("active");
     }
+  });
+
+  var mixer = mixitup(".filtr-container .row", {
+    selectors: {
+      target: ".col-post",
+    },
+    animation: {
+      duration: 500,
+    },
+  });
+
+  var mixer2 = mixitup(".filtr-container-draft .row", {
+    selectors: {
+      target: ".col-post",
+    },
+    animation: {
+      duration: 500,
+    },
   });
 });

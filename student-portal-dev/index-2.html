@@ -90,7 +90,12 @@
                 >
                   Add Friend
                 </button>
-                <button type="button" class="user-profile--action">
+                <button
+                  type="button"
+                  data-id="unfriend-alert-modal"
+                  id="user-profile--action-unfriend-alt"
+                  class="user-profile--action"
+                >
                   Requested
                 </button>
                 <button
@@ -125,23 +130,25 @@
             <nav class="user-work--nav">
               <ul>
                 <li class="active">
-                  <a data-href="all" href="javascript:void(0)">All Works</a>
+                  <a data-filter="all" href="javascript:void(0)">All Works</a>
                 </li>
                 <li>
-                  <a data-href="Academics" href="javascript:void(0)"
+                  <a data-filter=".academics" href="javascript:void(0)"
                     >Academics</a
                   >
                 </li>
                 <li>
-                  <a data-href="Honors" href="javascript:void(0)">Honors</a>
+                  <a data-filter=".honors" href="javascript:void(0)">Honors</a>
                 </li>
                 <li>
-                  <a data-href="Extracurriculars" href="javascript:void(0)"
+                  <a data-filter=".extracurriculars" href="javascript:void(0)"
                     >Extracurriculars</a
                   >
                 </li>
                 <li>
-                  <a data-href="Ventures" href="javascript:void(0)">Ventures</a>
+                  <a data-filter=".ventures" href="javascript:void(0)"
+                    >Ventures</a
+                  >
                 </li>
               </ul>
             </nav>
@@ -222,12 +229,15 @@
                 </div>
                 <div
                   id="user-work-content"
-                  class="user-work-tab-content active"
+                  class="user-work-tab-content filtr-container active"
                 >
                   <div class="row">
-                    <div class="col-md-4 col-post Academics">
+                    <div class="col-md-4 col-post academics">
                       <div class="col-post--inner">
-                        <a href="javascript:void(0)" class="col-post--visibility"></a>
+                        <a
+                          href="javascript:void(0)"
+                          class="col-post--visibility"
+                        ></a>
                         <div class="col-post--img">
                           <img src="images/pexels-engin-akyurt-2098604.png" />
                         </div>
@@ -237,9 +247,12 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4 col-post Academics">
+                    <div class="col-md-4 col-post academics">
                       <div class="col-post--inner">
-                        <a href="javascript:void(0)" class="col-post--visibility"></a>
+                        <a
+                          href="javascript:void(0)"
+                          class="col-post--visibility"
+                        ></a>
                         <div class="col-post--img">
                           <img src="images/item-post.png" />
                         </div>
@@ -249,9 +262,12 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4 col-post Honors">
+                    <div class="col-md-4 col-post honors">
                       <div class="col-post--inner">
-                        <a href="javascript:void(0)" class="col-post--visibility"></a>
+                        <a
+                          href="javascript:void(0)"
+                          class="col-post--visibility"
+                        ></a>
                         <div class="col-post--img">
                           <img src="images/item-post.png" />
                         </div>
@@ -263,9 +279,12 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4 col-post Extracurriculars">
+                    <div class="col-md-4 col-post extracurriculars">
                       <div class="col-post--inner">
-                        <a href="javascript:void(0)" class="col-post--visibility"></a>
+                        <a
+                          href="javascript:void(0)"
+                          class="col-post--visibility"
+                        ></a>
                         <div class="col-post--img">
                           <img src="images/item-post.png" />
                         </div>
@@ -275,9 +294,12 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4 col-post Extracurriculars">
+                    <div class="col-md-4 col-post extracurriculars">
                       <div class="col-post--inner">
-                        <a href="javascript:void(0)" class="col-post--visibility"></a>
+                        <a
+                          href="javascript:void(0)"
+                          class="col-post--visibility"
+                        ></a>
                         <div class="col-post--img">
                           <img src="images/item-post.png" />
                         </div>
@@ -287,9 +309,12 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4 col-post Honors">
+                    <div class="col-md-4 col-post honors">
                       <div class="col-post--inner">
-                        <a href="javascript:void(0)" class="col-post--visibility"></a>
+                        <a
+                          href="javascript:void(0)"
+                          class="col-post--visibility"
+                        ></a>
                         <div class="col-post--img">
                           <img src="images/item-post.png" />
                         </div>
@@ -299,9 +324,12 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4 col-post Extracurriculars">
+                    <div class="col-md-4 col-post extracurriculars">
                       <div class="col-post--inner">
-                        <a href="javascript:void(0)" class="col-post--visibility"></a>
+                        <a
+                          href="javascript:void(0)"
+                          class="col-post--visibility"
+                        ></a>
                         <div class="col-post--img">
                           <img src="images/item-post.png" />
                         </div>
@@ -311,9 +339,12 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4 col-post Ventures">
+                    <div class="col-md-4 col-post ventures">
                       <div class="col-post--inner">
-                        <a href="javascript:void(0)" class="col-post--visibility"></a>
+                        <a
+                          href="javascript:void(0)"
+                          class="col-post--visibility"
+                        ></a>
                         <div class="col-post--img">
                           <img src="images/item-post.png" />
                         </div>
@@ -323,9 +354,12 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4 col-post Extracurriculars">
+                    <div class="col-md-4 col-post extracurriculars">
                       <div class="col-post--inner">
-                        <a href="javascript:void(0)" class="col-post--visibility"></a>
+                        <a
+                          href="javascript:void(0)"
+                          class="col-post--visibility"
+                        ></a>
                         <div class="col-post--img">
                           <img src="images/item-post.png" />
                         </div>
@@ -335,9 +369,12 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4 col-post Ventures">
+                    <div class="col-md-4 col-post ventures">
                       <div class="col-post--inner">
-                        <a href="javascript:void(0)" class="col-post--visibility"></a>
+                        <a
+                          href="javascript:void(0)"
+                          class="col-post--visibility"
+                        ></a>
                         <div class="col-post--img">
                           <img src="images/item-post.png" />
                         </div>
@@ -349,11 +386,17 @@
                     </div>
                   </div>
                 </div>
-                <div id="user-draft-content" class="user-work-tab-content">
+                <div
+                  id="user-draft-content"
+                  class="user-work-tab-content filtr-container-draft"
+                >
                   <div class="row">
-                    <div class="col-md-4 col-post Extracurriculars">
+                    <div class="col-md-4 col-post extracurriculars">
                       <div class="col-post--inner">
-                        <a href="javascript:void(0)" class="col-post--visibility"></a>
+                        <a
+                          href="javascript:void(0)"
+                          class="col-post--visibility"
+                        ></a>
                         <div class="col-post--img">
                           <img src="images/item-post.png" />
                         </div>
@@ -363,9 +406,12 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4 col-post Extracurriculars">
+                    <div class="col-md-4 col-post extracurriculars">
                       <div class="col-post--inner">
-                        <a href="javascript:void(0)" class="col-post--visibility"></a>
+                        <a
+                          href="javascript:void(0)"
+                          class="col-post--visibility"
+                        ></a>
                         <div class="col-post--img">
                           <img src="images/item-post.png" />
                         </div>
@@ -375,9 +421,12 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4 col-post Extracurriculars">
+                    <div class="col-md-4 col-post extracurriculars">
                       <div class="col-post--inner">
-                        <a href="javascript:void(0)" class="col-post--visibility"></a>
+                        <a
+                          href="javascript:void(0)"
+                          class="col-post--visibility"
+                        ></a>
                         <div class="col-post--img">
                           <img src="images/item-post.png" />
                         </div>
@@ -387,9 +436,12 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4 col-post Extracurriculars">
+                    <div class="col-md-4 col-post extracurriculars">
                       <div class="col-post--inner">
-                        <a href="javascript:void(0)" class="col-post--visibility"></a>
+                        <a
+                          href="javascript:void(0)"
+                          class="col-post--visibility"
+                        ></a>
                         <div class="col-post--img">
                           <img src="images/item-post.png" />
                         </div>

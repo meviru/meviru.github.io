@@ -44,6 +44,9 @@ body {
           [class^="icon"] {
             font-size: 16px;
           }
+          &:hover {
+            opacity: 1;
+          }
         }
         &.active {
           > a {
@@ -62,6 +65,9 @@ body {
     &-icon {
       opacity: 0.45;
       font-size: 16px;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
   &--user {
