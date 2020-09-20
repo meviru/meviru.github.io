@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatSignal</title>
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/grid.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/profile-pages.css" />
+  </head>
+  <body>
+    <header class="cs-header">
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="cs-header--logo">
+            <a href="javascript:void(0)">
+              <img src="images/logo.png" alt="ChatSignal" />
+            </a>
+          </div>
+          <nav class="cs-nav">
+            <ul>
+              <li>
+                <a href="javascript:void(0)">
+                  <i data-feather="home"></i>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <i data-feather="message-circle"></i>
+                  Chats
+                </a>
+              </li>
+              <li class="active">
+                <a href="javascript:void(0)">
+                  <i data-feather="user"></i>
+                  Profil
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <i data-feather="mail"></i>
+                  Kontakte
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <i data-feather="search"></i>
+                  Suche
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <i data-feather="database"></i>
+                  Coins
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <i data-feather="help-circle"></i>
+                  Help
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="cs-header--right">
+            <ul class="cs-header--options">
+              <li>
+                <a href="javascript:void(0)">
+                  <i data-feather="bell"></i>
+                  <span class="cs-header--options-count">3</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <i data-feather="message-square"></i>
+                  <span class="cs-header--options-count">5</span>
+                </a>
+              </li>
+            </ul>
+            <div class="cs-header--user">
+              <a href="javascript:void(0)">
+                <img src="images/profile.png" />
+              </a>
+              <ul class="cs-header--user-dropdown">
+                <li>
+                  <a href="javascript:void(0)">
+                    <i data-feather="user"></i>
+                    Profil
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <i data-feather="mail"></i>
+                    Inbox
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <i data-feather="settings"></i>
+                    Settings
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <i data-feather="log-out"></i>
+                    Logout
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="cs-profile-wrap" id="cs-profile-wrap">
+      <div class="container">
+        <section class="cs-mainwrap">
+          <div class="row">
+            <div class="cs-col-320">
+              <div class="card">
+                <div class="card-body">
+                  <div class="cs-profile d-flex flex-align-center">
+                    <div class="cs-profile--img">
+                      <img src="images/1.jpg" />
+                    </div>
+                    <div class="cs-profile--info">
+                      <a href="javascript:void(0)">James John</a>
+                      <p>Surferin</p>
+                      <div class="cs-profile--action">
+                        <a
+                          href="javascript:void(0)"
+                          class="btn btn-sm btn-success"
+                        >
+                          <i data-feather="message-circle"></i>
+                          Chat
+                        </a>
+                        <a
+                          href="javascript:void(0)"
+                          class="btn btn-sm btn-pink"
+                        >
+                          💋 Küssen</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cs-profile--desc">
+                    <p class="cs-profile--desc-text">
+                      Hej, bin die John.😊 Bin natürlich auf der Suche nach
+                      einem Mann🕺🏼 hier und bin bis jetzt noch keinem begegnet
+                      der mich überzeugend konnte.🙄 Wenn du meinen Text hier
+                      gerade schon liest dann müsste es dich eigendlich kitzeln,
+                      ist doch eine Herausvorderung, ob du es schaffst mich zu
+                      überzeuge, oder?😇
+                    </p>
+                  </div>
+                  <div class="cs-navi">
+                    <div class="cs-navi--item">
+                      <a href="javascript:void(0)" class="cs-navi--link active">
+                        <span class="cs-navi--icon">
+                          <span class="svg-icon" data-feather="user"></span>
+                        </span>
+                        <span class="cs-navi--text">Account Information</span>
+                      </a>
+                    </div>
+                    <div class="cs-navi--item">
+                      <a href="javascript:void(0)" class="cs-navi--link">
+                        <span class="cs-navi--icon">
+                          <span class="svg-icon" data-feather="search"></span>
+                        </span>
+                        <span class="cs-navi--text">Search Profil</span>
+                      </a>
+                    </div>
+                    <div class="cs-navi--item">
+                      <a href="javascript:void(0)" class="cs-navi--link">
+                        <span class="cs-navi--icon">
+                          <span class="svg-icon" data-feather="image"></span>
+                        </span>
+                        <span class="cs-navi--text">Builder</span>
+                      </a>
+                    </div>
+                    <div class="cs-navi--item">
+                      <a href="javascript:void(0)" class="cs-navi--link">
+                        <span class="cs-navi--icon">
+                          <span
+                            class="svg-icon"
+                            data-feather="instagram"
+                          ></span>
+                        </span>
+                        <span class="cs-navi--text">Social Media</span>
+                      </a>
+                    </div>
+                    <div class="cs-navi--item">
+                      <a href="javascript:void(0)" class="cs-navi--link">
+                        <span class="cs-navi--icon">
+                          <span class="svg-icon" data-feather="shield"></span>
+                        </span>
+                        <span class="cs-navi--text">Change Passwort</span>
+                      </a>
+                    </div>
+                    <div class="cs-navi--title">Mehr Aktionen</div>
+                    <div class="cs-navi--item">
+                      <a href="javascript:void(0)" class="cs-navi--link danger">
+                        <span class="cs-navi--icon">
+                          <span
+                            class="svg-icon"
+                            data-feather="alert-triangle"
+                          ></span>
+                        </span>
+                        <span class="cs-navi--text">Melden</span>
+                      </a>
+                    </div>
+                    <div class="cs-navi--item">
+                      <a href="javascript:void(0)" class="cs-navi--link muted">
+                        <span class="cs-navi--icon">
+                          <span class="svg-icon" data-feather="slash"></span>
+                        </span>
+                        <span class="cs-navi--text">Blockieren</span>
+                      </a>
+                    </div>
+                    <div class="cs-navi--item">
+                      <a href="javascript:void(0)" class="cs-navi--link muted">
+                        <span class="cs-navi--icon">
+                          <span class="svg-icon" data-feather="slash"></span>
+                        </span>
+                        <span class="cs-navi--text">Deaktivieren</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cs-col-grow pd-20">
+              <div class="card">
+                <div
+                  class="card-header d-flex flex-align-center flex-justify-space-between"
+                >
+                  <div class="card-title">
+                    <h3 class="card-label">James John</h3>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul class="cs-user-info">
+                    <li>
+                      <div class="cs-user-info--icon">
+                        <i data-feather="user"></i>
+                      </div>
+                      <div class="cs-user-info--desc">
+                        <strong>Nickname</strong>
+                        <span>John90</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cs-user-info--icon">
+                        <i data-feather="git-pull-request"></i>
+                      </div>
+                      <div class="cs-user-info--desc">
+                        <strong>Geschlecht</strong>
+                        <span>Mann</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cs-user-info--icon">
+                        <i data-feather="flag"></i>
+                      </div>
+                      <div class="cs-user-info--desc">
+                        <strong>Land</strong>
+                        <span>DE</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cs-user-info--icon">
+                        <i data-feather="map-pin"></i>
+                      </div>
+                      <div class="cs-user-info--desc">
+                        <strong>Postleitzahl</strong>
+                        <span>10115</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cs-user-info--icon">
+                        <i data-feather="gift"></i>
+                      </div>
+                      <div class="cs-user-info--desc">
+                        <strong>Alter</strong>
+                        <span>30</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cs-user-info--icon">
+                        <i data-feather="star"></i>
+                      </div>
+                      <div class="cs-user-info--desc">
+                        <strong>Sternzeichen</strong>
+                        <span>Löwe</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cs-user-info--icon">
+                        <i data-feather="arrow-up"></i>
+                      </div>
+                      <div class="cs-user-info--desc">
+                        <strong>Größe</strong>
+                        <span>180cm - 190cm</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cs-user-info--icon">
+                        <i data-feather="users"></i>
+                      </div>
+                      <div class="cs-user-info--desc">
+                        <strong>Gewicht</strong>
+                        <span>Sportlich</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cs-user-info--icon">
+                        <i data-feather="edit-2"></i>
+                      </div>
+                      <div class="cs-user-info--desc">
+                        <strong>Haarfarbe</strong>
+                        <span>Braun</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cs-user-info--icon">
+                        <i data-feather="eye"></i>
+                      </div>
+                      <div class="cs-user-info--desc">
+                        <strong>Augenfarbe</strong>
+                        <span>Dunkel Blau</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cs-user-info--icon">
+                        <i data-feather="smile"></i>
+                      </div>
+                      <div class="cs-user-info--desc">
+                        <strong>Hauttyp</strong>
+                        <span>Mittel</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card">
+                <div
+                  class="card-header d-flex flex-align-center flex-justify-space-between"
+                >
+                  <div class="card-title">
+                    <h3 class="card-label">Bilder</h3>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="cs-profile-images owl-carousel">
+                    <div class="cs-profile-images--item">
+                      <img src="images/1.jpg" />
+                    </div>
+                    <div class="cs-profile-images--item">
+                      <img src="images/1.jpg" />
+                    </div>
+                    <div class="cs-profile-images--item">
+                      <img src="images/1.jpg" />
+                    </div>
+                    <div class="cs-profile-images--item">
+                      <img src="images/1.jpg" />
+                    </div>
+                    <div class="cs-profile-images--item">
+                      <img src="images/1.jpg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div
+                  class="card-header d-flex flex-align-center flex-justify-space-between"
+                >
+                  <div class="card-title">
+                    <h3 class="card-label">Kontoinformationen</h3>
+                    <span class="card-label-sub">
+                      Ändern Sie Ihre Kontoeinstellungen</span
+                    >
+                  </div>
+                  <div class="card-toolbar">
+                    <button type="button" class="btn btn-success">
+                      Änderungen speichern
+                    </button>
+                    <button type="button" class="btn btn-secondary">
+                      Stornieren
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="form-group row no-gutters">
+                    <label class="col-xl-3 col-lg-3 col-form-label text-alert"
+                      >Bild hochladen</label
+                    >
+                    <div class="col-lg-9 col-xl-6">
+                      <div
+                        class="form-group--file-upload"
+                        style="background-image: url('../profile/images/1.jpg')"
+                      >
+                        <label class="form-group--file-upload-icon">
+                          <i data-feather="edit-2"></i>
+                          <input type="file" name="profile_avatar" />
+                        </label>
+                      </div>
+                      <p class="form-group--sm-text">
+                        *Es dürfen max. 12 Bilder mit einer Größe von je 8MB
+                        hochgeladen werden. Bilder mit einer Größe ab 16MB
+                        werden ohne Fehlermeldung abgewiesen. Dateien können im
+                        *.jpg, *.gif oder *.bmp Format gespeichert werden.
+                        Andere Dateien werden mit einer Fehlermeldung
+                        abgewiesen.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="form-group row no-gutters">
+                    <label class="col-xl-3 col-lg-3 col-form-label text-alert"
+                      >Nutzername</label
+                    >
+                    <div class="col-lg-9 col-xl-6">
+                      <input
+                        type="text"
+                        class="form-control"
+                        value=""
+                        placeholder="Nutzername"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row no-gutters">
+                    <label class="col-xl-3 col-lg-3 col-form-label text-alert"
+                      >Email Address</label
+                    >
+                    <div class="col-lg-9 col-xl-6">
+                      <input
+                        type="text"
+                        class="form-control"
+                        value=""
+                        placeholder="Email Address"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row no-gutters">
+                    <label class="col-xl-3 col-lg-3 col-form-label text-alert">
+                      Persönliche Informationen</label
+                    >
+                    <div class="col-lg-9 col-xl-6">
+                      <textarea
+                        class="form-control"
+                        placeholder="Email Address"
+                      >
+Hej, bin die John.😊 Bin natürlich auf der Suche nach einem Mann🕺🏼 hier und bin bis jetzt noch keinem begegnet der mich überzeugend konnte.🙄 Wenn du meinen Text hier gerade schon liest dann müsste es dich eigendlich kitzeln, ist doch eine Herausvorderung, ob du es schaffst mich zu überzeuge, oder?😇</textarea
+                      >
+                      <p class="form-group--sm-text">
+                        *In deinem Profiltext kannst du dich den anderen
+                        vorstellen und deine Wünsche äußern. Beachte bitte, dass
+                        es verboten ist private Daten zu veröffentlichen.
+                        Weiterhin ist es nicht gestattet, den Profiltext zur
+                        Kommunikation oder zu anderen Zwecken zu missbrauchen.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="form-group row no-gutters">
+                    <label class="col-xl-3 col-lg-3 col-form-label text-alert"
+                      >Haarfarbe</label
+                    >
+                    <div class="col-lg-9 col-xl-6">
+                      <select class="form-control">
+                        <option value="">Braun</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row no-gutters">
+                    <label class="col-xl-3 col-lg-3 col-form-label text-alert"
+                      >Augenfarbe</label
+                    >
+                    <div class="col-lg-9 col-xl-6">
+                      <select class="form-control">
+                        <option value="">Dunkel Blau</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row no-gutters">
+                    <label class="col-xl-3 col-lg-3 col-form-label text-alert"
+                      >Hauttyp</label
+                    >
+                    <div class="col-lg-9 col-xl-6">
+                      <select class="form-control">
+                        <option value="">Mittel</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row no-gutters">
+                    <label class="col-xl-3 col-lg-3 col-form-label text-alert"
+                      >Größe</label
+                    >
+                    <div class="col-lg-9 col-xl-6">
+                      <select class="form-control">
+                        <option value="">180cm - 190cm</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row no-gutters">
+                    <label class="col-xl-3 col-lg-3 col-form-label text-alert"
+                      >Figur</label
+                    >
+                    <div class="col-lg-9 col-xl-6">
+                      <select class="form-control">
+                        <option value="">Sportlich</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row no-gutters">
+                    <label
+                      class="col-xl-3 col-lg-3 col-form-label text-alert"
+                    ></label>
+                    <div class="col-lg-9 col-xl-6">
+                      <div class="checkbox-inline">
+                        <label class="checkbox">
+                          <input type="checkbox" checked="checked" />
+                          <span></span>Wohnort verstecken</label
+                        >
+                        <label class="checkbox">
+                          <input type="checkbox" />
+                          <span></span>Eingeloggt bleiben</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row no-gutters">
+                    <label
+                      class="col-xl-3 col-lg-3 col-form-label text-alert"
+                    ></label>
+                    <div class="col-lg-9 col-xl-6">
+                      <div class="form-group--title">
+                        Spezielle Änderungswünsche?
+                      </div>
+                      <p class="form-group--sm-text">
+                        Wenn du deine Stammdaten ändern möchtest, kontaktiere
+                        bitte unseren Kundensupport.
+                      </p>
+                      <button type="button" class="btn btn-success">
+                        <i data-feather="life-buoy"></i>
+                        Kundensupport
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div
+                  class="card-header d-flex flex-align-center flex-justify-space-between"
+                >
+                  <div class="card-title">
+                    <h3 class="card-label">Passwort ändern</h3>
+                    <span class="card-label-sub">
+                      Ändern Sie Ihr Konto Passwort</span
+                    >
+                  </div>
+                  <div class="card-toolbar">
+                    <button type="button" class="btn btn-success">
+                      Änderungen speichern
+                    </button>
+                    <button type="button" class="btn btn-secondary">
+                      Stornieren
+                    </button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="form-group row no-gutters">
+                    <label class="col-xl-3 col-lg-3 col-form-label text-alert"
+                      >Derzeitiges Passwort</label
+                    >
+                    <div class="col-lg-9 col-xl-6">
+                      <input
+                        type="password"
+                        class="form-control"
+                        value=""
+                        placeholder="Derzeitiges Passwort"
+                      />
+                      <a href="#" class="text-sm font-weight-bold"
+                        >Passwort vergessen?</a
+                      >
+                    </div>
+                  </div>
+                  <div class="form-group row no-gutters">
+                    <label class="col-xl-3 col-lg-3 col-form-label text-alert"
+                      >Neues Passwort</label
+                    >
+                    <div class="col-lg-9 col-xl-6">
+                      <input
+                        type="password"
+                        class="form-control"
+                        value=""
+                        placeholder="Neues Passwort"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row no-gutters">
+                    <label class="col-xl-3 col-lg-3 col-form-label text-alert"
+                      >Bestätigen Password</label
+                    >
+                    <div class="col-lg-9 col-xl-6">
+                      <input
+                        type="password"
+                        class="form-control"
+                        value=""
+                        placeholder="Bestätigen Password"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/feather.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        feather.replace();
+
+        $(".cs-profile-images").slick({
+          adaptiveHeight: true,
+          autoplay: true,
+          speed: 500,
+          dots: false,
+          slidesToShow: 4,
+          cssEase: "ease-in-out",
+        });
+      });
+    </script>
+  </body>
+</html>

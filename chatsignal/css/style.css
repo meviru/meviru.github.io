@@ -65,6 +65,12 @@ select {
           align-items: center;
 }
 
+.flex-justify-space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .flag {
   display: inline-block;
   position: relative;
