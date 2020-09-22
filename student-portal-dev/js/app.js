@@ -237,17 +237,17 @@ $(document).ready(function () {
   });
 
   //post inner sideshow
+  var slideIndex = 1;
+
   $(".col-post--inner").click(function (e) {
     e.preventDefault();
     $("body").addClass("modal-open");
     modalBackdrop.fadeIn();
     setTimeout(function () {
       $("#post-preview-modal").addClass("active");
+      showSlides(slideIndex);
     }, 200);
   });
-
-  var slideIndex = 1;
-  showSlides(slideIndex);
 
   // Next/previous controls
   function plusSlides(n) {
@@ -299,21 +299,44 @@ $(document).ready(function () {
     }
   });
 
-  var mixer = mixitup(".filtr-container .row", {
-    selectors: {
-      target: ".col-post",
-    },
-    animation: {
-      duration: 500,
-    },
+  var containerPosts = document.querySelector(".filtr-container .row");
+  if (containerPosts != undefined) {
+    mixitup(containerPosts, {
+      selectors: {
+        target: ".col-post",
+      },
+      animation: {
+        duration: 500,
+      },
+    });
+
+    mixitup(".filtr-container-draft .row", {
+      selectors: {
+        target: ".col-post",
+      },
+      animation: {
+        duration: 500,
+      },
+    });
+  }
+
+  $("#open-add-post").click(function (e) {
+    e.preventDefault();
+    $("body").addClass("modal-open");
+    modalBackdrop.fadeIn();
+    setTimeout(function () {
+      $("#post-add-modal").addClass("active");
+    }, 200);
   });
 
-  var mixer2 = mixitup(".filtr-container-draft .row", {
-    selectors: {
-      target: ".col-post",
-    },
-    animation: {
-      duration: 500,
-    },
+  $("#change-post-type").change(function (e) {
+    var pType = $("option:selected", this).attr("data-value");
+    if (pType == "post-add-extracurriculars" || pType == "post-add-ventures") {
+      $(this).parents(".modal-wrapper").addClass("modal-wrapper-xl");
+    } else {
+      $(this).parents(".modal-wrapper").removeClass("modal-wrapper-xl");
+    }
+    $(".post-add-wrap").removeClass("active");
+    $("#" + pType).addClass("active");
   });
 });

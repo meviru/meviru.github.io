@@ -111,6 +111,7 @@ button,
 textarea,
 select {
   outline: none;
+  -webkit-appearance: none;
   appearance: none;
   font: normal 18px/1.4 "Poppins", sans-serif;
 }
@@ -184,6 +185,14 @@ select {
   &.modal-wrapper-lg {
     .modal-wrapper--inner {
       width: 1024px;
+      @media screen and (max-width: 767px) {
+        width: 400px;
+      }
+    }
+  }
+  &.modal-wrapper-xl {
+    .modal-wrapper--inner {
+      width: 1304px;
       @media screen and (max-width: 767px) {
         width: 400px;
       }
@@ -272,6 +281,9 @@ select {
         display: inline-block;
         vertical-align: middle;
         letter-spacing: -0.5px;
+        option {
+          font-size: 16px;
+        }
         @media screen and (max-width: 767px) {
           font-size: 22px;
         }
@@ -324,7 +336,7 @@ select {
         letter-spacing: -1px;
         padding-bottom: 10px;
       }
-      &--checkbox {
+      &--inline-radio {
         padding-bottom: 10px;
         > label {
           display: inline-flex;
@@ -391,6 +403,138 @@ select {
         right: 10px;
         z-index: 2;
       }
+      &--upload {
+        &-control {
+          height: 90px;
+          display: flex;
+          padding: 15px;
+          cursor: pointer;
+          position: relative;
+          border-radius: 12px;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          border: 2px dashed #d7e4f8;
+          background-color: $white;
+          input[type="file"] {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+            cursor: pointer;
+          }
+          img {
+            width: 38px;
+            display: block;
+            margin-bottom: 12px;
+          }
+          span {
+            font-size: 9px;
+            color: #bcc0c4;
+          }
+        }
+        &-list {
+          padding-top: 5px;
+          &-item {
+            display: flex;
+            color: $black;
+            font-size: 11px;
+            margin-top: 10px;
+            position: relative;
+            align-items: center;
+            justify-content: space-between;
+            > span {
+              flex-grow: 1;
+              display: block;
+              max-width: 92%;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+            .close-icon {
+              position: relative;
+              display: block;
+              width: 10px;
+              height: 10px;
+              span {
+                width: 10px;
+                height: 10px;
+                display: block;
+                transform: rotate(45deg);
+                &:before,
+                &:after {
+                  position: absolute;
+                  content: "";
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  margin: auto;
+                  background-color: #b9bec2;
+                }
+                &:before {
+                  width: 10px;
+                  height: 2px;
+                }
+                &:after {
+                  width: 2px;
+                  height: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+      &--checkbox {
+        padding-bottom: 10px;
+        &-item {
+          display: flex;
+          position: relative;
+          align-items: center;
+          margin-top: 12px;
+          > input[type="checkbox"],
+          > input[type="radio"] {
+            width: 0;
+            height: 0;
+            opacity: 0;
+            &:checked {
+              & ~ span {
+                &:after {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+          > span {
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 30px;
+            &:before {
+              position: absolute;
+              content: "";
+              top: 0;
+              left: 0;
+              width: 21px;
+              height: 21px;
+              cursor: pointer;
+              border-radius: 3px;
+              border: 1px solid #b4bfc9;
+            }
+            &:after {
+              position: absolute;
+              opacity: 0;
+              content: "";
+              top: 7px;
+              left: 5px;
+              width: 10px;
+              height: 4px;
+              transform: rotate(-45deg);
+              border-left: 2px solid #b4bfc9;
+              border-bottom: 2px solid #b4bfc9;
+            }
+          }
+        }
+      }
     }
     .form-action {
       text-align: right;
@@ -424,9 +568,7 @@ select {
       margin: 0 -15px;
     }
     .modal-item-inline {
-      width: 33.33%;
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
+      flex: 1 0 0;
       padding: 0 15px;
       margin-bottom: 22px;
       @media screen and (max-width: 991px) {

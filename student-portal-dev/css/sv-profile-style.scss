@@ -679,6 +679,33 @@ body {
   }
 }
 
+.modal-wrapper {
+  &--post-add {
+    .post-add-wrap {
+      display: none;
+      > .row {
+        margin: 0 -15px;
+      }
+      &.active {
+        display: block;
+      }
+    }
+    .modal-content {
+      .form-group {
+        > label {
+          font-weight: 600;
+        }
+        &--checkbox-wrap {
+          > label {
+            position: static;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
 @keyframes opac {
   from {
     opacity: 0;

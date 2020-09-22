@@ -90,30 +90,6 @@
                 >
                   Add Friend
                 </button>
-                <button
-                  type="button"
-                  data-id="unfriend-alert-modal"
-                  id="user-profile--action-unfriend-alt"
-                  class="user-profile--action"
-                >
-                  Requested
-                </button>
-                <button
-                  id="user-profile--action-unfriend"
-                  data-id="unfriend-alert-modal"
-                  type="button"
-                  class="user-profile--action user-profile--action--alt"
-                >
-                  Friends
-                </button>
-                <button
-                  id="user-profile--action-edit"
-                  data-id="edit-profile-modal"
-                  type="button"
-                  class="user-profile--action"
-                >
-                  Edit Profile
-                </button>
               </div>
               <div class="user-profile--info">
                 <h3 class="user-profile--name">Johnathan van Doenathan</h3>
@@ -127,7 +103,7 @@
             </div>
           </div>
           <div class="user-wrap--works">
-            <nav class="user-work--nav">
+            <nav class="user-work--nav" style="display: none">
               <ul>
                 <li class="active">
                   <a data-filter="all" href="javascript:void(0)">All Works</a>
@@ -152,13 +128,13 @@
                 </li>
               </ul>
             </nav>
-            <div class="user-work--add">
-              <a href="javascript:void(0)" id="open-add-post" class="user-work--add-btn">
+            <div class="user-work--add" style="display: none">
+              <a href="javascript:void(0)" class="user-work--add-btn">
                 <img src="images/icon-add.png" />
               </a>
             </div>
             <div class="user-wrap--inner">
-              <div class="user-work--tabs">
+              <div class="user-work--tabs" style="display: none">
                 <a
                   href="javascript:void(0)"
                   data-href="user-work-content"
@@ -218,7 +194,7 @@
                 </a>
               </div>
               <div class="user-work--content">
-                <div class="private-profile">
+                <div class="private-profile active">
                   <img src="images/icon-lock.png" />
                   <h2 class="private-profile--title">
                     This Account is Private
@@ -572,26 +548,13 @@ I am a designer. I am from America. I am currently residing in New York City. Fo
         </div>
       </div>
     </div>
-    <div
-      id="post-add-modal"
-      class="modal-wrapper modal-wrapper-lg modal-wrapper--post-add"
-    >
+    <div class="modal-wrapper modal-wrapper-lg modal-wrapper--acad">
       <div class="modal-wrapper--inner">
         <div class="modal-header">
           <div class="modal-header--choose">
-            <select id="change-post-type">
-              <option data-value="post-add-academics" value="">
-                Academic Entry
-              </option>
-              <option data-value="post-add-honors" value="">
-                Honors Entry
-              </option>
-              <option data-value="post-add-extracurriculars" value="">
-                Extracurriculars Entry
-              </option>
-              <option data-value="post-add-ventures" value="">
-                Ventures Entry
-              </option>
+            <select>
+              <option>Academic Entry</option>
+              <option>Existing Entry</option>
             </select>
           </div>
           <a href="javascript:void(0)" class="modal-close">
@@ -599,480 +562,57 @@ I am a designer. I am from America. I am currently residing in New York City. Fo
           </a>
         </div>
         <div class="modal-content">
-          <div class="post-add-wrap active" id="post-add-academics">
-            <div class="row">
-              <div class="modal-item-inline">
-                <div class="form-group">
-                  <label>Entry Title</label>
-                  <input type="text" class="form-control" />
-                  <span class="form-group--hint">0/50 characters</span>
-                </div>
-                <div class="form-group">
-                  <label>Entry Type</label>
-                  <select class="form-control">
-                    <option>Option 1</option>
-                    <option>Academic Entry</option>
-                    <option>Academic Entry</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>Entry Name</label>
-                  <input type="text" class="form-control" />
-                </div>
-                <div class="form-group">
-                  <label>Test Score</label>
-                  <input type="text" class="form-control" />
-                </div>
+          <div class="row">
+            <div class="modal-item-inline">
+              <div class="form-group">
+                <label>Entry Title</label>
+                <input type="text" class="form-control" />
+                <span class="form-group--hint">0/50 characters</span>
               </div>
-              <div class="modal-item-inline">
-                <div class="form-group">
-                  <label>Test Date</label>
-                  <input type="text" class="form-control" />
-                </div>
-                <div class="form-group">
-                  <label>Additional Details</label>
-                  <textarea class="form-control"></textarea>
-                  <span class="form-group--hint">0/50 characters</span>
-                </div>
+              <div class="form-group">
+                <label>Entry Type</label>
+                <select class="form-control">
+                  <option>Option 1</option>
+                  <option>Academic Entry</option>
+                  <option>Academic Entry</option>
+                </select>
               </div>
-              <div class="modal-item-inline">
-                <div class="form-group">
-                  <div class="form-group--upload">
-                    <label class="form-group--upload-control">
-                      <input type="file" name="file" />
-                      <img src="images/folder-upload.png" />
-                      <span>Drag and drop your files here (max. 3)</span>
-                    </label>
-                  </div>
-                  <ul class="form-group--upload-list">
-                    <li class="form-group--upload-list-item">
-                      <span>Screen Shot 2017-0912 a th…loremAM.png</span>
-                      <a href="javascript:void(0)" class="close-icon">
-                        <span></span>
-                      </a>
-                    </li>
-                    <li class="form-group--upload-list-item">
-                      <span>Product Release Timeline.png</span>
-                      <a href="javascript:void(0)" class="close-icon">
-                        <span></span>
-                      </a>
-                    </li>
-                    <li class="form-group--upload-list-item">
-                      <span>Marketing Flyer.pdf</span>
-                      <a href="javascript:void(0)" class="close-icon">
-                        <span></span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+              <div class="form-group">
+                <label>Entry Name</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Test Score</label>
+                <input type="text" class="form-control" />
               </div>
             </div>
-            <div class="form-action">
-              <div class="row">
-                <div class="form-action--left">
-                  <button
-                    type="button"
-                    class="form-action--btn form-action--btn-red"
-                  >
-                    Delete
-                  </button>
-                  <button type="button" disabled class="form-action--btn">
-                    Save
-                  </button>
-                </div>
-                <div class="form-action--right">
-                  <button type="button" class="form-action--btn">Finish</button>
-                </div>
+            <div class="modal-item-inline">
+              <div class="form-group">
+                <label>Test Date</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label>Additional Details</label>
+                <textarea class="form-control"></textarea>
+                <span class="form-group--hint">0/50 characters</span>
               </div>
             </div>
           </div>
-          <div class="post-add-wrap" id="post-add-honors">
+          <div class="form-action">
             <div class="row">
-              <div class="modal-item-inline">
-                <div class="form-group">
-                  <label>Entry Title</label>
-                  <input type="text" class="form-control" />
-                  <span class="form-group--hint">0/50 characters</span>
-                </div>
-                <div class="form-group">
-                  <label>Award Level</label>
-                  <select class="form-control">
-                    <option>International</option>
-                    <option>National</option>
-                  </select>
-                </div>
+              <div class="form-action--left">
+                <button
+                  type="button"
+                  class="form-action--btn form-action--btn-red"
+                >
+                  Delete
+                </button>
+                <button type="button" disabled class="form-action--btn">
+                  Save
+                </button>
               </div>
-              <div class="modal-item-inline">
-                <div class="form-group form-group--checkbox-wrap">
-                  <label>Grade Awarded in</label>
-                  <div class="form-group--checkbox">
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>9th Grade</span>
-                    </label>
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>10th Grade</span>
-                    </label>
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>11th Grade</span>
-                    </label>
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>12th Grade</span>
-                    </label>
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>After graduation</span>
-                    </label>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label>Award Description</label>
-                  <textarea class="form-control"></textarea>
-                  <span class="form-group--hint">0/50 characters</span>
-                </div>
-              </div>
-              <div class="modal-item-inline">
-                <div class="form-group">
-                  <div class="form-group--upload">
-                    <label class="form-group--upload-control">
-                      <input type="file" name="file" />
-                      <img src="images/folder-upload.png" />
-                      <span>Drag and drop your files here (max. 3)</span>
-                    </label>
-                  </div>
-                  <ul class="form-group--upload-list">
-                    <li class="form-group--upload-list-item">
-                      <span>Screen Shot 2017-0912 a th…loremAM.png</span>
-                      <a href="javascript:void(0)" class="close-icon">
-                        <span></span>
-                      </a>
-                    </li>
-                    <li class="form-group--upload-list-item">
-                      <span>Product Release Timeline.png</span>
-                      <a href="javascript:void(0)" class="close-icon">
-                        <span></span>
-                      </a>
-                    </li>
-                    <li class="form-group--upload-list-item">
-                      <span>Marketing Flyer.pdf</span>
-                      <a href="javascript:void(0)" class="close-icon">
-                        <span></span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="form-action">
-              <div class="row">
-                <div class="form-action--left">
-                  <button
-                    type="button"
-                    class="form-action--btn form-action--btn-red"
-                  >
-                    Delete
-                  </button>
-                  <button type="button" disabled class="form-action--btn">
-                    Save
-                  </button>
-                </div>
-                <div class="form-action--right">
-                  <button type="button" class="form-action--btn">Finish</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="post-add-wrap" id="post-add-extracurriculars">
-            <div class="row">
-              <div class="modal-item-inline">
-                <div class="form-group">
-                  <label>Entry Title</label>
-                  <input type="text" class="form-control" />
-                  <span class="form-group--hint">0/50 characters</span>
-                </div>
-                <div class="form-group">
-                  <label>Entry Type</label>
-                  <select class="form-control">
-                    <option>Option 1</option>
-                    <option>Academic Entry</option>
-                    <option>Academic Entry</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>Position Description</label>
-                  <textarea class="form-control"></textarea>
-                  <span class="form-group--hint">0/50 characters</span>
-                </div>
-              </div>
-              <div class="modal-item-inline">
-                <div class="form-group">
-                  <label>Activity Description</label>
-                  <textarea class="form-control"></textarea>
-                  <span class="form-group--hint">0/50 characters</span>
-                </div>
-                <div class="form-group form-group--checkbox-wrap">
-                  <label>Grade Awarded in</label>
-                  <div class="form-group--checkbox">
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>9th Grade</span>
-                    </label>
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>10th Grade</span>
-                    </label>
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>11th Grade</span>
-                    </label>
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>12th Grade</span>
-                    </label>
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>After graduation</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-item-inline">
-                <div class="form-group form-group--checkbox-wrap">
-                  <label>Timing of Participation</label>
-                  <div class="form-group--checkbox">
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>During school year</span>
-                    </label>
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>During school break</span>
-                    </label>
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>All year</span>
-                    </label>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label>Hours per week</label>
-                  <input type="text" class="form-control" />
-                </div>
-                <div class="form-group">
-                  <label>Weeks per year</label>
-                  <input type="text" class="form-control" />
-                </div>
-                <div class="form-group form-group--checkbox-wrap">
-                  <div class="form-group--checkbox">
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span
-                        >I hope to participate in something similar in
-                        college.</span
-                      >
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-item-inline">
-                <div class="form-group">
-                  <div class="form-group--upload">
-                    <label class="form-group--upload-control">
-                      <input type="file" name="file" />
-                      <img src="images/folder-upload.png" />
-                      <span>Drag and drop your files here (max. 3)</span>
-                    </label>
-                  </div>
-                  <ul class="form-group--upload-list">
-                    <li class="form-group--upload-list-item">
-                      <span>Screen Shot 2017-0912 a th…loremAM.png</span>
-                      <a href="javascript:void(0)" class="close-icon">
-                        <span></span>
-                      </a>
-                    </li>
-                    <li class="form-group--upload-list-item">
-                      <span>Product Release Timeline.png</span>
-                      <a href="javascript:void(0)" class="close-icon">
-                        <span></span>
-                      </a>
-                    </li>
-                    <li class="form-group--upload-list-item">
-                      <span>Marketing Flyer.pdf</span>
-                      <a href="javascript:void(0)" class="close-icon">
-                        <span></span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="form-action">
-              <div class="row">
-                <div class="form-action--left">
-                  <button
-                    type="button"
-                    class="form-action--btn form-action--btn-red"
-                  >
-                    Delete
-                  </button>
-                  <button type="button" disabled class="form-action--btn">
-                    Save
-                  </button>
-                </div>
-                <div class="form-action--right">
-                  <button type="button" class="form-action--btn">Finish</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="post-add-wrap" id="post-add-ventures">
-            <div class="row">
-              <div class="modal-item-inline">
-                <div class="form-group">
-                  <label>Entry Title</label>
-                  <input type="text" class="form-control" />
-                  <span class="form-group--hint">0/50 characters</span>
-                </div>
-                <div class="form-group">
-                  <label>Entry Type</label>
-                  <select class="form-control">
-                    <option>Option 1</option>
-                    <option>Academic Entry</option>
-                    <option>Academic Entry</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>Venture Description</label>
-                  <textarea class="form-control"></textarea>
-                  <span class="form-group--hint">0/50 characters</span>
-                </div>
-                <div class="form-group">
-                  <label>Position Description</label>
-                  <input type="text" class="form-control" />
-                  <span class="form-group--hint">0/50 characters</span>
-                </div>
-              </div>
-              <div class="modal-item-inline">
-                <div class="form-group">
-                  <label>Additional Information</label>
-                  <textarea class="form-control"></textarea>
-                  <span class="form-group--hint">0/50 characters</span>
-                </div>
-                <div class="form-group form-group--checkbox-wrap">
-                  <label>Grade Awarded in</label>
-                  <div class="form-group--checkbox">
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>9th Grade</span>
-                    </label>
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>10th Grade</span>
-                    </label>
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>11th Grade</span>
-                    </label>
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>12th Grade</span>
-                    </label>
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>After graduation</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-item-inline">
-                <div class="form-group form-group--checkbox-wrap">
-                  <label>Timing of Participation</label>
-                  <div class="form-group--checkbox">
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>During school year</span>
-                    </label>
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>During school break</span>
-                    </label>
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span>All year</span>
-                    </label>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label>Hours per week</label>
-                  <input type="text" class="form-control" />
-                </div>
-                <div class="form-group">
-                  <label>Weeks per year</label>
-                  <input type="text" class="form-control" />
-                </div>
-                <div class="form-group form-group--checkbox-wrap">
-                  <div class="form-group--checkbox">
-                    <label class="form-group--checkbox-item">
-                      <input type="checkbox" />
-                      <span
-                        >I hope to participate in something similar in
-                        college.</span
-                      >
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-item-inline">
-                <div class="form-group">
-                  <div class="form-group--upload">
-                    <label class="form-group--upload-control">
-                      <input type="file" name="file" />
-                      <img src="images/folder-upload.png" />
-                      <span>Drag and drop your files here (max. 3)</span>
-                    </label>
-                  </div>
-                  <ul class="form-group--upload-list">
-                    <li class="form-group--upload-list-item">
-                      <span>Screen Shot 2017-0912 a th…loremAM.png</span>
-                      <a href="javascript:void(0)" class="close-icon">
-                        <span></span>
-                      </a>
-                    </li>
-                    <li class="form-group--upload-list-item">
-                      <span>Product Release Timeline.png</span>
-                      <a href="javascript:void(0)" class="close-icon">
-                        <span></span>
-                      </a>
-                    </li>
-                    <li class="form-group--upload-list-item">
-                      <span>Marketing Flyer.pdf</span>
-                      <a href="javascript:void(0)" class="close-icon">
-                        <span></span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="form-action">
-              <div class="row">
-                <div class="form-action--left">
-                  <button
-                    type="button"
-                    class="form-action--btn form-action--btn-red"
-                  >
-                    Delete
-                  </button>
-                  <button type="button" disabled class="form-action--btn">
-                    Save
-                  </button>
-                </div>
-                <div class="form-action--right">
-                  <button type="button" class="form-action--btn">Finish</button>
-                </div>
+              <div class="form-action--right">
+                <button type="button" class="form-action--btn">Finish</button>
               </div>
             </div>
           </div>
