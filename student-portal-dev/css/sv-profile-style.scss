@@ -411,6 +411,27 @@ body {
   }
 }
 
+.user-wrap--works {
+  .private-profile--active {
+    .col-post {
+      &--inner {
+        &:before {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+        }
+      }
+    }
+    .private-profile {
+      display: flex;
+    }
+  }
+}
+
 .private-profile {
   display: none;
   position: absolute;
@@ -423,9 +444,6 @@ body {
   flex-direction: column;
   justify-content: center;
   background-color: rgba($white, 0.85);
-  &.active {
-    display: flex;
-  }
   > img {
     display: block;
     margin: 0 auto;
@@ -659,7 +677,7 @@ body {
     flex-grow: 1;
     padding: 40px;
     overflow-y: auto;
-    max-height: 568px;
+    max-height: 610px;
     ul {
       li {
         margin-bottom: 10px;

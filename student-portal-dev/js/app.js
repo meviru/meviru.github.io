@@ -241,10 +241,11 @@ $(document).ready(function () {
 
   $(".col-post--inner").click(function (e) {
     e.preventDefault();
+    var modalName = $(this).attr("data-post-name");
     $("body").addClass("modal-open");
     modalBackdrop.fadeIn();
     setTimeout(function () {
-      $("#post-preview-modal").addClass("active");
+      $("#post-preview-modal-" + modalName).addClass("active");
       showSlides(slideIndex);
     }, 200);
   });
