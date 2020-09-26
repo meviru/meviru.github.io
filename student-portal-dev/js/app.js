@@ -246,7 +246,7 @@ $(document).ready(function () {
     modalBackdrop.fadeIn();
     setTimeout(function () {
       $("#post-preview-modal-" + modalName).addClass("active");
-      showSlides(slideIndex);
+      showSlides(slideIndex, modalName);
     }, 200);
   });
 
@@ -269,10 +269,14 @@ $(document).ready(function () {
     showSlides((slideIndex = idNumber));
   });
 
-  function showSlides(n) {
+  function showSlides(n, modalName) {
     var i;
-    var slides = document.querySelectorAll(".post-gallery--item");
-    var dots = document.querySelectorAll(".post-gallery--dot");
+    var slides = document.querySelectorAll(
+      "#post-preview-modal-" + modalName + " .post-gallery--item"
+    );
+    var dots = document.querySelectorAll(
+      "#post-preview-modal-" + modalName + " .post-gallery--dot"
+    );
     if (n > slides.length) {
       slideIndex = 1;
     }

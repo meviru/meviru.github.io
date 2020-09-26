@@ -22117,7 +22117,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     modalBackdrop.fadeIn();
     setTimeout(function () {
       (0, _jquery.default)("#post-preview-modal-" + modalName).addClass("active");
-      showSlides(slideIndex);
+      showSlides(slideIndex, modalName);
     }, 200);
   }); // Next/previous controls
 
@@ -22137,10 +22137,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     showSlides(slideIndex = idNumber);
   });
 
-  function showSlides(n) {
+  function showSlides(n, modalName) {
     var i;
-    var slides = document.querySelectorAll(".post-gallery--item");
-    var dots = document.querySelectorAll(".post-gallery--dot");
+    var slides = document.querySelectorAll("#post-preview-modal-" + modalName + " .post-gallery--item");
+    var dots = document.querySelectorAll("#post-preview-modal-" + modalName + " .post-gallery--dot");
 
     if (n > slides.length) {
       slideIndex = 1;
@@ -22243,7 +22243,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64444" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63980" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
