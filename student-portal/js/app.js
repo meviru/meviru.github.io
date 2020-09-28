@@ -185,6 +185,7 @@ $(document).ready(function () {
       $("body").removeClass("modal-open");
       modalBackdrop.fadeOut();
       $(this).removeClass("active");
+      $('.post-info--user-dropdown-menu').removeClass("active");
     }
   });
 
@@ -232,9 +233,6 @@ $(document).ready(function () {
     e.stopPropagation();
     $(this).toggleClass("active");
   });
-
-  //post inner sideshow
-  var slideIndex = 1;
 
   $(".col-post--inner").click(function (e) {
     e.preventDefault();
@@ -313,4 +311,9 @@ $(document).ready(function () {
     $(".post-add-wrap").removeClass("active");
     $("#" + pType).addClass("active");
   });
+
+  $(".post-info--user-dropdown-icon").click(function (e) {
+    $(this).siblings('.post-info--user-dropdown-menu').toggleClass('active');
+  });
+  
 });

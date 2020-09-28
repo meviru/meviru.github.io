@@ -1673,6 +1673,10 @@ body {
   background-color: #000;
 }
 
+.post-info--user-dropdown {
+  position: relative;
+}
+
 .post-info--user-dropdown-icon {
   position: absolute;
   top: 50%;
@@ -1713,6 +1717,46 @@ body {
 
 .post-info--user-dropdown-icon span:after {
   right: -5px;
+}
+
+.post-info--user-dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 25px;
+  z-index: 9;
+  right: 10px;
+  width: 120px;
+  border-radius: 4px;
+  background-color: #fff;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-box-shadow: 0 0 4px -2px #445870;
+          box-shadow: 0 0 4px -2px #445870;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+.post-info--user-dropdown-menu.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.post-info--user-dropdown-menu li a {
+  color: #445870;
+  font-size: 14px;
+  display: block;
+  padding: 10px 18px;
+  background-color: #fff;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+.post-info--user-dropdown-menu li a:hover {
+  font-weight: 600;
+  background-color: #f6f7f9;
 }
 
 .post-info--user-detail {
