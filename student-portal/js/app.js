@@ -315,5 +315,4 @@ $(document).ready(function () {
   $(".post-info--user-dropdown-icon").click(function (e) {
     $(this).siblings('.post-info--user-dropdown-menu').toggleClass('active');
   });
-  
 });
