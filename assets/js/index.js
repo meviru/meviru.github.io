@@ -1,7 +1,6 @@
 (function () {
   // your page initialization code here
   // the DOM will be available here
-  gsap.registerPlugin(ScrollTrigger);
   gsap
     .timeline()
     .to(
