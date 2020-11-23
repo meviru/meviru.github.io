@@ -1,0 +1,229 @@
+$black: #111;
+$white: #fff;
+$primary: #0a68e7;
+
+@font-face {
+  font-family: "Circular Std";
+  src: local("Circular Std Book"), local("CircularStd-Book"),
+    url("../fonts/CircularStd-Book.woff2") format("woff2"),
+    url("../fonts/CircularStd-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Circular Std";
+  src: local("Circular Std Medium"), local("CircularStd-Medium"),
+    url("../fonts/CircularStd-Medium.woff2") format("woff2"),
+    url("../fonts/CircularStd-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Circular Std";
+  src: local("Circular Std Bold"), local("CircularStd-Bold"),
+    url("../fonts/CircularStd-Bold.woff2") format("woff2"),
+    url("../fonts/CircularStd-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  border: none;
+  max-width: 100%;
+}
+
+a {
+  color: $black;
+  outline: none;
+}
+
+body {
+  font-family: "Circular Std", sans-serif;
+  color: $black;
+  font-size: 17px;
+  background-color: $white;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  max-width: 80vw;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 105%;
+  overflow: hidden;
+  background-color: $primary;
+  &--inner {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    color: $white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+  }
+  &--title {
+    font-size: 3rem;
+    line-height: 0.85;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+  }
+  &--sub-title {
+    font-size: 1.4rem;
+    margin-left: 1rem;
+    font-weight: normal;
+  }
+  &--title,
+  &--sub-title {
+    span {
+      opacity: 0;
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+}
+
+.header {
+  &--wrapper {
+    display: flex;
+    padding-top: 3.75rem;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+    }
+  }
+  &--logo {
+    > a {
+      position: relative;
+      font-size: 1.75rem;
+      font-weight: bold;
+      letter-spacing: -0.05rem;
+    }
+  }
+  &--contact {
+    > a {
+      transition: 0.2s ease-in-out;
+      display: inline-flex;
+      align-items: center;
+      margin-right: 3rem;
+      font-weight: 500;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.hero {
+  &-wrapper {
+    padding: 13.125rem 0;
+    .hero-content {
+      overflow: hidden;
+    }
+    &--img {
+      margin-bottom: 1rem;
+      > img {
+        width: 40px;
+        display: block;
+        animation: wave-animation 2.5s infinite;
+        transform-origin: 70% 70%;
+      }
+    }
+    &--title {
+      font-size: 3.75rem;
+      font-weight: 500;
+      max-width: 750px;
+      span {
+        display: block;
+      }
+    }
+    &--desc {
+      margin-top: 2rem;
+      max-width: 700px;
+      font-size: 1.375rem;
+      line-height: 2rem;
+    }
+  }
+}
+
+.footer {
+  &--wrapper {
+    display: flex;
+    align-items: center;
+    padding-bottom: 3.75rem;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+    }
+  }
+  &--coming-soon {
+    font-weight: 500;
+  }
+  &--contact {
+    > a {
+      transition: 0.2s ease-in-out;
+      display: inline-flex;
+      align-items: center;
+      margin-right: 3rem;
+      font-weight: 500;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
