@@ -313,6 +313,12 @@ body {
     overflow: hidden;
     max-height: var(--extracurriculars-height);
   }
+  &--honors {
+    .sp-timeline--img {
+      width: 50px;
+      flex: 0 0 50px;
+    }
+  }
 }
 
 .sp-more-less {
