@@ -961,6 +961,7 @@ body {
   height: 158px;
   border-radius: 50%;
   background-color: #f9fafb;
+  border: 2px solid transparent;
 }
 
 .sp-profile--img img {
