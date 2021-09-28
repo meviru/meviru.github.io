@@ -1,0 +1,10 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+    .cls-1{fill:#000000;}
+    @media (prefers-color-scheme: dark) {
+        .cls-1{fill:#ffffff;}
+    }
+</style>
+<path class="cls-1" d="M3 11V28.4545H6.57955V17.0511H6.72443L11.2415 28.3693H13.679L18.196 17.0938H18.3409V28.4545H21.9205V11H17.3693L12.5625 22.7273H12.358L7.55114 11H3Z" />
+<path class="cls-1" d="M23.3362 14.0426H28.6799V28.4545H32.3276V14.0426H37.6714V11H23.3362V14.0426Z" />
+</svg>
