@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap"); // imported cdn fonts
+
+$fonts-global: "Jost", sans-serif; // global fonts
+
+$light: #fff; // light color
+$dark: #000; // dark color
+
+$primary: #373e68; // primary color
+$text-color: #707279; // body text color
+
+$btn: $primary; // default button color
+$btn-primary: #ae1feb; // primary button color
+
+$card-bg: #fff; // card background
+$card-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; // card shadow
+
+$gradient-bg-fb: rgba(77, 140, 237, 1); // gradient background fallback
+$gradient-bg-1: rgba(160, 65, 245, 1);
+$gradient-bg-2: rgba(198, 75, 181, 1);
+$gradient-bg-3: rgba(237, 159, 139, 1); //gradient background
+$gradient-list: $gradient-bg-fb 0%, $gradient-bg-1 33%, $gradient-bg-2 65%,
+  $gradient-bg-3 100%; //gradient background list
+
+$grey-bg: #f2f4ff; // body background
+$tags-primary: #4763eb; // tags background

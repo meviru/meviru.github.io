@@ -1,0 +1,39 @@
+<div class="card card--gradient">
+  <div class="card-content">
+    <h2 class="card-content--title">Frontend Mentor</h2>
+    <span class="card-content--desc">Feedback Board</span>
+    <div class="toggle-icon" (click)="openOtherCards()" [class.active]="isCardOpen">
+      <span></span>
+    </div>
+  </div>
+</div>
+<div class="card xs-hidden" [class.xs-hidden]="!isCardOpen">
+  <div class="card-content">
+    <ul class="tags">
+      <li *ngFor="let item of tagList"><a class="tag-item" (click)="filterFeedback(item.name)"
+          href="javascript:void(0)">{{item.name}}</a></li>
+    </ul>
+  </div>
+</div>
+<div class="card xs-hidden" [class.xs-hidden]="!isCardOpen">
+  <div class="card-header">
+    <h2 class="card-header--title">Roadmap</h2>
+    <a href="javascript:void(0)" class="card-header--action">View</a>
+  </div>
+  <div class="card-content">
+    <ul class="roadmap-list">
+      <li class="planned">
+        <span class="roadmap-list--item">Planned</span>
+        <span class="roadmap-list--count">2</span>
+      </li>
+      <li class="inprogress">
+        <span class="roadmap-list--item">In-Progress</span>
+        <span class="roadmap-list--count">3</span>
+      </li>
+      <li class="live">
+        <span class="roadmap-list--item">Live</span>
+        <span class="roadmap-list--count">1</span>
+      </li>
+    </ul>
+  </div>
+</div>

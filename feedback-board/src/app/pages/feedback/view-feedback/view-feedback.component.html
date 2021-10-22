@@ -1,0 +1,56 @@
+<div class="inner-container">
+  <ng-container *ngIf="feedback.id">
+    <div class="header-action">
+      <a routerLink="" class="header-action--back">Go Back</a>
+      <a [routerLink]="['/feedback/edit', feedback.id]" class="btn btn-secondary">Edit Feedback</a>
+    </div>
+    <div class="card list-item">
+      <div class="list-item--upcount text-center">{{feedback.upcount}}</div>
+      <div class="list-item--detail">
+        <a href="javascript:void(0)" class="list-item--title">{{feedback.title}}</a>
+        <p class="list-item--desc">{{feedback.desc}}</p>
+        <span class="tag-item list-item--tag">{{feedback.tag}}</span>
+      </div>
+      <div class="list-item--commentc">
+        <span class="count">{{comments.length}}</span>
+      </div>
+    </div>
+    <div class="card comments">
+      <h2 class="form-title" *ngIf="comments.length > 1; else commentCountBlock">{{comments.length}} Comments</h2>
+      <ng-template #commentCountBlock>
+        <h2 class="form-title">{{comments.length}} Comment</h2>
+      </ng-template>
+      
+      <div class="comments-list">
+        <div class="comments-list--item" *ngFor="let comment of comments">
+          <div class="comments-list--img">
+            <img src="https://i.pravatar.cc/300">
+          </div>
+          <div class="comments-list--detail">
+            <div class="comments-list--user">
+              <h2 class="comments-list--uname">Eliah Moss</h2>
+              <p class="comments-list--username">@hexagon.bestagon</p>
+              <a href="javascript:void(0)" class="comments-list--action">Reply</a>
+            </div>
+            <div class="comments-list--info">{{comment.commentDetail}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card add-comments">
+      <h2 class="form-title">Add Comment</h2>
+      <form #f="ngForm" (ngSubmit)="onSubmit(f); ">
+        <input type="hidden" name="id" [(ngModel)]="feedback.id">
+        <div class="form-group">
+          <textarea name="comment" required [maxlength]="maxTextLength" [(ngModel)]="comment" #commentRef="ngModel"
+            class="form-control" placeholder="Type your comment here"
+            [class.error]="commentRef.errors?.required"></textarea>
+        </div>
+        <div class="form-group text-right">
+          <span class="form-group--notice">{{maxTextLength - comment.length}} Characters Left</span>
+          <button class="btn btn-primary" [disabled]=" !f.form.valid">Post Feedback</button>
+        </div>
+      </form>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img {
+  border: none;
+  max-width: 100%;
+}
+
+body {
+  font-family: $fonts-global;
+  font-size: 15px;
+  color: $text-color;
+  background-color: $grey-bg;
+}
+
+a {
+  cursor: pointer;
+  color: $text-color;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input,
+button,
+select,
+textarea {
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: $fonts-global;
+  &[disabled] {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(55, 62, 104, 1);transform: ;msFilter:;'%3E%3Cpath d='M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center right 12px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1230px;
+  @media screen and (max-width: 1024px) {
+    max-width: 900px;
+  }
+  @media screen and (max-width: 991px) {
+    max-width: 700px;
+  }
+  @media screen and (max-width: 767px) {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+.inner-container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 900px;
+  @media screen and (max-width: 991px) {
+    max-width: 700px;
+  }
+  @media screen and (max-width: 767px) {
+    max-width: 100%;
+  }
+}
+
+.page-wrapper {
+  padding: 60px 0;
+  @media screen and (max-width: 767px) {
+    padding: 0 0 40px 0;
+  }
+}
+
+.inner-wrapper {
+  @include flexbox();
+  @include flex-wrap(wrap);
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  color: $light;
+  padding: 12px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: $btn;
+  @include transition(0.5s ease background-color, 0.5s ease color);
+
+  &:hover {
+    background-color: darken($btn, 8%);
+  }
+  &.btn-primary {
+    background-color: $btn-primary;
+    &:hover {
+      background-color: darken($btn-primary, 8%);
+    }
+  }
+  @media screen and (max-width: 767px) {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .xs-hidden {
+    display: none !important;
+  }
+}
+
+.card {
+  position: relative;
+  display: block;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: $card-bg;
+  box-shadow: $card-shadow;
+  margin-bottom: 20px;
+  &-header {
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(space-between);
+    &--title {
+      font-size: 20px;
+    }
+  }
+  &--gradient {
+    color: $light;
+    background: $gradient-bg-fb;
+    @include gradient();
+    .card-content {
+      @include flexbox();
+      min-height: 110px;
+      @include flex-direction(column);
+      @include justify-content(flex-end);
+      &--title {
+        font-size: 20px;
+      }
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    &--gradient {
+      .card-content {
+        min-height: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &--gradient {
+      padding: 15px 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      box-shadow: none;
+      background: transparent;
+      &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: -20px;
+        right: -20px;
+        z-index: -1;
+        @include gradient();
+      }
+    }
+  }
+}
+
+.tags {
+  @include flexbox();
+  @include flex-wrap(wrap);
+  @include align-items(center);
+  li {
+    margin: 5px 10px 5px 0;
+  }
+}
+
+.tag-item {
+  padding: 4px 15px;
+  border-radius: 5px;
+  color: $tags-primary;
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: $grey-bg;
+  &.selected {
+    color: $light;
+    background-color: $tags-primary;
+  }
+}
