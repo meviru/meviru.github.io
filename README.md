@@ -40,7 +40,7 @@ I have almost around 4 years of experience in IT industries working with differe
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Sites Developed
-* [GoHub](https://meviru.github.io/gohub/index.html)
-* [ShowTrackr](https://meviru.github.io/showtrackr/index.html)
-* [PhyLab](https://viralpatel.xyz/phylab/index.html)
-* [Foundation](https://viralpatel.xyz/Foundation/)
+* [GoHub](https://meviru-github-io.vercel.app/gohub/index.html)
+* [ShowTrackr](https://meviru-github-io.vercel.app/showtrackr/index.html)
+* [PhyLab](https://meviru-github-io.vercel.app/phylab/index.html)
+* [Foundation](https://meviru-github-io.vercel.app/Foundation/)
