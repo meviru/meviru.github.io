@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Design Agency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="site-nav">
+            <ul class="site-nav__wrapper">
+                <li class="site-nav__item"><a class="site-nav__link" href="javascript:void(0)">Work</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="javascript:void(0)">Insight</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="javascript:void(0)">About</a></li>
+                <li class="site-nav__item"><a class="site-nav__link" href="javascript:void(0)">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="site-logo">
+            <a href="javascript:void(0)">
+                <img src="assets/images/asterisk-solid.svg" width="50">
+            </a>
+        </div>
+        <div class="site-description">
+            <div class="site-description__text">
+                <p>Creative agency with a 15-year expertise in</p>
+            </div>
+            <div class="site-description__text">
+                <p>design, advertising, communications</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-title">
+            <div class="hero-title__text">
+                <div>We craft original</div>
+            </div>
+            <div class="hero-title__text">
+                <div>brands people love</div>
+            </div>
+            <div class="hero-title__text">
+                <div>and enjoy.</div>
+            </div>
+        </div>
+        <div class="hero-animate">
+            <img src="assets/images/asterisk-solid-primary.svg">
+        </div>
+    </section>
+
+    <section class="portfolio-section">
+        <div class="section-title">
+            <div class="section-title__wrap">
+                <h2 class="section-title__h2">Portfolio</h2>
+            </div>
+            <div class="section-title__wrap">
+                <p class="section-title__desc">Some of our handcrafted creations.</p>
+            </div>
+        </div>
+        <div class="portfolio-wrapper">
+            <div class="portfolio-item">
+                <div class="portfolio-item__wrap">
+                    <img class="portfolio-item__img" src="assets/images/portfolio-1.jpg">
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-item__wrap">
+                    <img class="portfolio-item__img" src="assets/images/portfolio-2.jpg">
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-item__wrap">
+                    <img class="portfolio-item__img" src="assets/images/portfolio-3.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script type="text/javascript">
+
+        gsap.from(".hero-animate", {
+            rotation: -360,
+            opacity: 0,
+            duration: 4,
+            ease: "power4.out"
+        });
+
+        gsap.to(".hero-animate", {
+            scale: 1.2,
+            xPercent: 80,
+            duration: 1.5,
+            ease: "power4.inOut"
+        }, "2.5");
+
+        gsap.from(".hero-title__text div", {
+            yPercent: 100,
+            stagger: 0.25,
+            duration: 1.5,
+            ease: "power4.inOut"
+        }, "2.7");
+
+        gsap.from(".hero-section", {
+            height: '100vh',
+            duration: 1.5,
+            ease: "power4.inOut"
+        }, "2.7");
+
+        gsap.from(".site-nav__link", {
+            yPercent: 100,
+            duration: 1.25,
+            stagger: 0.25,
+            ease: "power4.inOut"
+        }, "2.7");
+
+        gsap.from(".site-logo img", {
+            yPercent: 100,
+            duration: 1.25,
+            ease: "power4.inOut"
+        }, "3.2");
+
+        gsap.from(".site-description__text p", {
+            yPercent: 100,
+            duration: 1.25,
+            stagger: 0.25,
+            ease: "power4.inOut"
+        }, "3.2");
+
+        gsap.from(".section-title__h2", {
+            yPercent: 100,
+            duration: 1.25,
+            ease: "power4.inOut"
+        }, "3.4");
+
+        gsap.from(".section-title__desc", {
+            yPercent: 100,
+            duration: 1.25,
+            ease: "power4.inOut"
+        }, "3.7");
+
+        gsap.from(".portfolio-item", {
+            x: -70,
+            opacity: 0,
+            duration: 1,
+            stagger: -0.08,
+            ease: "power4.out"
+        }, "3.6");
+
+    </script>
+</body>
+
+</html>
