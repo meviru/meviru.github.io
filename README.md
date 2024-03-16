@@ -1,6 +1,6 @@
 ## About Me
 
-I have almost around 4 years of experience in IT industries working with different technologies. I have worked on several technologies like Angular, Vue.js, Ionic Framework, WordPress, PHP, Magento, CakePHP, Laravel, etc.
+I have almost 7+ years of experience in IT industries working with different technologies. I have worked on several technologies like Angular, Vue.js, Ionic Framework, WordPress, PHP, Magento, CakePHP, Laravel, etc.
 
 ▶ Expertise:<br>
 ✅ HTML, CSS, JavaScript, jQuery, SCSS, Bootstrap<br>
