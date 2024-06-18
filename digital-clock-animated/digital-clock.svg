@@ -1,4 +1,4 @@
-<svg viewBox="0 0 350 150" class="clock-container" width="350" height="250" 
+<svg viewBox="0 0 500 200" class="clock-container" width="600" height="600" 
   xmlns="http://www.w3.org/2000/svg" 
   xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- MIT license by Viral Patel https://github.com/meviru/digital-clock-animated -->
@@ -6,8 +6,6 @@
   <defs>
     <style type="text/css">
       <![CDATA[
-        @import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
-
         @keyframes pulse {
           0% { opacity: 1; }
           50% { opacity: 0.5; }
@@ -15,7 +13,7 @@
         }
 
         .digital-clock {
-          font-family: 'VT323', sans-serif;
+          font-family: monospace, sans-serif;
           font-size: 5em;
           fill: #00FF00;
         }
@@ -43,8 +41,12 @@
 
       const updateTimer = () => {
         seconds = (seconds + 1) % 60;
-        if (seconds === 0) minutes = (minutes + 1) % 60;
-        if (minutes === 0 && seconds === 0) hours = (hours + 1) % 24;
+        if (seconds === 0) {
+          minutes = (minutes + 1) % 60;
+          if (minutes === 0) {
+            hours = (hours + 1) % 24;
+          }
+        }
 
         updateTime(hoursElement, hours);
         updateTime(minutesElement, minutes);
