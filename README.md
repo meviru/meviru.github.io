@@ -34,13 +34,14 @@ I have almost 7+ years of experience in IT industries working with different tec
 
 <!-- CONTACT -->
 ## Hire me on
-[<img src="https://www.upwork.com/favicon.ico">](https://www.upwork.com/freelancers/~01444c733819e88c64)<br>
-<br> [<img src="https://www.f-cdn.com/assets/main/en/assets/freelancer-logo.svg">](https://freelancer.in/u/viralpatel508)
-
+[![Upwork](https://img.shields.io/badge/UpWork-6FDA44?style=for-the-badge&logo=Upwork&logoColor=white)](https://www.upwork.com/freelancers/~01444c733819e88c64)
+[![Freelancer](https://img.shields.io/badge/Freelancer-29B2FE?style=for-the-badge&logo=Freelancer&logoColor=white)](https://freelancer.in/u/viralpatel508)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Sites Developed
-* [GoHub](https://meviru-github-io.vercel.app/gohub/index.html)
-* [ShowTrackr](https://meviru-github-io.vercel.app/showtrackr/index.html)
-* [PhyLab](https://meviru-github-io.vercel.app/phylab/index.html)
-* [Foundation](https://meviru-github-io.vercel.app/Foundation/)
+* [Translated.io](https://1translated-io.vercel.app/)
+* [WorldRanks.io](https://worldranks.vercel.app/)
+* [GoHub](https://viru.vercel.app/gohub/index.html)
+* [ShowTrackr](https://viru.vercel.app/showtrackr/index.html)
+* [PhyLab](https://viru.vercel.app/phylab/index.html)
+* [Foundation](https://viru.vercel.app/Foundation/)
